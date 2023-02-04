@@ -22,7 +22,7 @@ title: Superkat's Awesome Website
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is my awesome description for my awesome new website!
-baseurl: "superkat.github.io" # the subpath of your site, e.g. /blog
+baseurl: "/superkat.github.io" # the subpath of your site, e.g. /blog
 url: "https://superkat32.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb #Do I even have a twitter?
 github_username:  Superkat32

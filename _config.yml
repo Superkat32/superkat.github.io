@@ -26,6 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://superkat32.github.io/superkat.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb #Do I even have a twitter?
 github_username:  Superkat32
+repository: Superkat32/superkat.github.io
 
 # Build settings
 theme: jekyll-theme-hacker

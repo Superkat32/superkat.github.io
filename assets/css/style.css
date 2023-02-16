@@ -71,12 +71,90 @@
   body {
     margin: 0;
     padding: 0;
-    background: #151515 url("../images/bkg.png") 0 0;
+    background: linear-gradient(to bottom, #040621, #255ac6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #eaeaea;
     font-size: 16px;
     line-height: 1.5;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   }
+
+  .glint {
+    background: url(../images/glint.png) center center/cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-position: right -45px bottom 5%;
+    z-index: -3;
+  }
+
+  .constellations {
+    background: url(../images/constellation.png) center center/cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-position: right -45px bottom 5%;
+    z-index: -2;
+  }
+
+  .milkyway {
+    background: url(../images/milkyway.png) center center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .star-container:nth-of-type(1) .star-1 {
+    background: url('../images/star.png') no-repeat center center/contain;
+    position: fixed;
+    top: 170px;
+    left: 42%;
+    width: 100%;
+    height: 100%;
+    background-size: 5%;
+    animation: size-stars 7.5s ease-in-out alternate infinite;
+    transform-origin: center;
+    z-index: -1;
+  }
+  
+  .star-container:nth-of-type(2) .star-2 {
+    background: url('../images/star2.png') no-repeat center center/contain;
+    position: fixed;
+    top: 45px;
+    left: 38%;
+    width: 100%;
+    height: 100%;
+    background-size: 5%;
+    animation: size-stars 7s ease-in-out alternate infinite;
+    transform-origin: center;
+    z-index: -1;
+  }  
+  
+  @keyframes move-stars {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(100vw, 100vh);
+    }
+  }
+  
+  @keyframes size-stars {
+    from {
+      transform: scale(1) rotate(0);
+    }
+    to {
+      transform: scale(0.7) rotate(180deg);
+    }
+  } 
   
   /* General & 'Reset' Stuff */
   .container {

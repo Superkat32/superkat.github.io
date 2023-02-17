@@ -92,8 +92,8 @@
   }
 
   .bgstars {
-    background: url(../images/backgroundStars.png) center center/cover no-repeat;
-    position: absolute;
+    background: url(../images/backgroundStars.png) center center/cover repeat;
+    position: fixed;
     bottom: 0;
     right: 0;
     width: 100%;
@@ -426,6 +426,7 @@
   
   .btn:hover {
     background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+    font-size: 105%;
   }
   
   .btn .icon {
@@ -477,6 +478,14 @@
   
   #a-title {
     text-decoration: none;
+  }
+
+  a{
+    text-decoration-line: none; 
+  }
+
+  a:hover {
+    text-decoration-line: underline;
   }
   
   /*# sourceMappingURL=style.css.map */

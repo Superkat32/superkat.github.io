@@ -91,6 +91,16 @@
     z-index: -3;
   }
 
+  .bgstars {
+    background: url(../images/backgroundStars.png) center center/cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+  }
+
   .constellations {
     background: url(../images/constellation.png) center center/cover no-repeat;
     position: absolute;
@@ -426,8 +436,21 @@
   }
   
   .btn-github .icon {
-    opacity: 0.6;
-    background: url("../images/blacktocat.png") 0 0 no-repeat;
+    opacity: 1.0;
+    background: url("../images/github.png") 0 0 no-repeat;
+    background-size: 100%;
+  }
+
+  .btn-projects .icon {
+    opacity: 1.0;
+    background: url("../images/projects.png") 0 0 no-repeat;
+    background-size: 110%;
+  }
+
+  .btn-aboutme .icon {
+    opacity: 1.0;
+    background: url("../images/aboutme.png") 0 0 no-repeat;
+    background-size: 110%;
   }
   
   /* Links

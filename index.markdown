@@ -23,5 +23,6 @@ I enjoy creating Minecraft mods for the Fabric Mod Loader using Java and releasi
 I've been creating Minecraft mods since mid-2022.
 </p> -->
 <div style="border: 3px inset #a758ecb6; display: flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">
-    <span style="font-family: cursive">I'm Superkat32&lt;a.k.a Kat&gt;, and I enjoy making Minecraft mods for Fabric, and uploading them to Modrinth.</span>
+    <span style="font-family: cursive">I'm Superkat32&lt;a.k.a Kat&gt;, and I enjoy making Minecraft mods for Fabric, and uploading them to Modrinth.&nbsp;</span>
 </div>
+<p style="border: 3px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">View all of my released &lt;<a href="/projects/"> projects </a>&gt; here!</p>

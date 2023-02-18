@@ -111,6 +111,18 @@
     background-position: right -45px bottom 5%;
     z-index: -2;
   }
+  
+  .galaxy {
+    background: url(../images/galaxy.png) center center/cover no-repeat;
+    position: fixed;
+    top: 37%;
+    right: 40%;
+    width: 100%;
+    height: 100%;
+    background-position: center center ;
+    background-size: 40%;
+    z-index: -1;
+  }
 
   .milkyway {
     background: url('../images/milkyway.png') no-repeat center center/contain;
@@ -231,6 +243,36 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
+
+  @keyframes grow-tilt {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+      transform: scale(1.1) rotate(-5deg);
+    }
+  }
+
+  .grow-tilt {
+    animation: grow-tilt 3s ease-in-out alternate-reverse infinite;
+  }
+
+  @keyframes shrink-back {
+    0% {
+      transform: scale(1.1) rotate(10deg);
+      left: 50px;
+      top: 50px;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      left: 0;
+      top: 0;
+    }
+  }
+  
   
   /* General & 'Reset' Stuff */
   .container {
@@ -422,11 +464,13 @@
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    animation: shrink-back 0.3s ease-out;
+    animation-play-state: running;
   }
   
   .btn:hover {
     background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-    font-size: 105%;
+    animation: grow-tilt 4s ease-in-out alternate infinite;
   }
   
   .btn .icon {
@@ -481,7 +525,7 @@
   }
 
   a{
-    text-decoration-line: none; 
+    text-decoration-line: none;
   }
 
   a:hover {

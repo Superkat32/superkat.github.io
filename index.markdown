@@ -15,6 +15,41 @@ layout: default
   }
 </style>
 
+<script>
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const visitedKey = "visited";
+
+window.onload = () => {
+  const h1 = document.querySelector("h1");
+
+  if (!localStorage.getItem(visitedKey)) {
+    let iterations = 0;
+
+    const interval = setInterval(() => {
+      console.log("text is being hovered over!");
+      h1.innerText = h1.dataset.value
+        .split("")
+        .map((letter, index) => {
+          if (index < iterations) {
+            return h1.dataset.value[index];
+          }
+
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+
+      if (iterations >= h1.dataset.value.length) clearInterval(interval);
+
+      iterations += 1 / 3;
+    }, 30);
+  }
+};
+
+window.addEventListener("beforeunload", () => {
+  localStorage.removeItem(visitedKey);
+});
+</script>
+
 <h1 style="border: 7px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">Hello, world!</h1>
 <div style="border: 3px inset #a758ecb6; display: flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">
     <span style="font-family: cursive">I'm Superkat32&lt;a.k.a Kat&gt;, and I enjoy making Minecraft mods for &lt;<a href="https://fabricmc.net/">Fabric</a>&gt;, and uploading them to &lt;<a href="https://modrinth.com/">Modrinth</a>&gt;.&nbsp;</span>

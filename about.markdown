@@ -4,6 +4,41 @@ title: About
 permalink: /about/
 ---
 
+<script>
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const visitedKey = "visited";
+
+window.onload = () => {
+  const h1 = document.querySelector("h1");
+
+  if (!localStorage.getItem(visitedKey)) {
+    let iterations = 0;
+
+    const interval = setInterval(() => {
+      console.log("text is being hovered over!");
+      h1.innerText = h1.dataset.value
+        .split("")
+        .map((letter, index) => {
+          if (index < iterations) {
+            return h1.dataset.value[index];
+          }
+
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+
+      if (iterations >= h1.dataset.value.length) clearInterval(interval);
+
+      iterations += 1 / 3;
+    }, 30);
+  }
+};
+
+window.addEventListener("beforeunload", () => {
+  localStorage.removeItem(visitedKey);
+});
+</script>
+
 <h1 style="border: 7px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">About Me - My Coding Journey Thus Far...</h1>
 <p style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">I have been toying around with code since roughly 2020-ish. I never really did anything beyond a few super ultra small projects until mid-2022, whenever I started my first Minecraft mod, &lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;. I had played around with Python, HTML, and JavaScript for a very very small amount of time before then, but had taken Java a little farther. I barely knew what I was doing, but I was set on my current and future ideas. I finished the mod around 3-ish months later. It wasn't fully the vision I had for it, because it didn't have multiplayer support, but I was tired of working on it.</p>
 <p style="border: 3px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Some time had passed before I had my first pull request on one of my repos. It was on Broken Lead Warner, and it was to add multiplayer support. It was a great experience to communicate with another developer right there on GitHub. I merged the request and kept how the developer who created the PR acted in mind so that if I needed too, I could apply that learning experience whenever I created my own PR.</p>

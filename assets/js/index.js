@@ -1,3 +1,7 @@
+// A comment for anyone(myself included) who may be reading this.
+//This part isn't actually used, it's simply copy-pasted into the .md file.
+//Why? Because I couldn't figure out how to get it working otherwise, and I don't want to delete this.
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const visitedKey = "visited";
 

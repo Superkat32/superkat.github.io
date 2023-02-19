@@ -291,7 +291,7 @@
   }
   
   li {
-    line-height: 1.4;
+    line-height: 1.4;   
   }
   
   /* Header, <header>
@@ -302,9 +302,30 @@
   header {
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
-    border-bottom: 1px dashed #67f76c;
+    /* border-bottom: 1px dashed #67f76c; */
+    text-align: center;
     padding: 20px 0;
     margin: 0 0 40px 0;
+    border-bottom: 10px white;
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+  }
+
+  header::before {
+    content: ""; /* required for a pseudo-element */
+    position: absolute; /* position the element relative to the parent */
+    bottom: -3px; /* position at the bottom of the parent element */
+    left: 0; /* position at the left of the parent element */
+    width: 100%; /* make the element as wide as the parent */
+    height: 3px; /* set the height of the element */
+    background: linear-gradient(to right, rgb(81, 0, 255), rgb(13, 0, 255), rgb(0, 98, 255), #0ff, rgb(0, 98, 255), rgb(13, 0, 255), rgb(81, 0, 255)); /* apply a gradient */
+    z-index: -1; /* move the pseudo-element behind the parent element */
+    transition: all 0.5s ease-in-out; /* apply a transition */
+  }
+
+  header:hover::after {
+    height: 6px; /* change the height on hover */
   }
   
   header h1 {
@@ -444,8 +465,11 @@
   hr {
     height: 0;
     border: 0;
-    border-bottom: 1px dashed #b5e853;
-    color: #b5e853;
+    /* border-bottom: 1px dashed #b5e853;
+    color: #b5e853; */
+    background: linear-gradient(to right, #f00 10%, #fffa3f 25%, #1c1c1c 25%, #3dd2ff 50%, #1c1c1c 75%, #fffa3f 75%, #f00 90%);
+    box-shadow: 0px 0px 20px #fff, 0px 0px 10px #fff;
+    margin: 50px 0;
   }
   
   /* Buttons
@@ -532,5 +556,7 @@
   a:hover {
     text-decoration-line: underline;
   }
+
+
   
   /*# sourceMappingURL=style.css.map */

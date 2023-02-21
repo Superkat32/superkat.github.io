@@ -211,7 +211,7 @@
     animation: size-stars 7s ease-in-out alternate infinite;
     transform-origin: center;
     z-index: -1;
-  }  
+  }
   
   @keyframes move-stars {
     from {

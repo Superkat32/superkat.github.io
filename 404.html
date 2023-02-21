@@ -21,6 +21,75 @@ layout: 404
     background-attachment: fixed;
     color: #eaeaea;
   }
+  .uh-oh {
+    height: 120px;
+    width: 120px;
+  }
+  
+  /* Animate the "uh-oh" images to rotate left and right */
+  @keyframes rotate {
+    25% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+  }
+  
+  /* Animate the "uh-oh" images to move up and down */
+  @keyframes move {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(0, 10px);
+    }
+  }
+  
+  /* Set the animation for each "uh-oh" image */
+  .uh-oh:nth-child(1) {
+    animation: rotate 12s ease-in-out reverse infinite;
+    top: 25%;
+    left: 225%;
+    transform-origin: center;
+    /* background-size: auto; */
+  }
+  
+  .uh-oh:nth-child(2) {
+    animation: rotate 14s ease-in-out infinite;
+    top: 20%;
+    left: 5%;
+    transform-origin: center;
+  }
+  
+  .uh-oh:nth-child(3) {
+    animation: rotate 17s ease-in-out reverse infinite;
+    top: 65%;
+    left: 200%;
+    transform-origin: center;
+  }
+
+  .uh-oh:nth-child(4) {
+    animation: rotate 19s ease-in-out infinite;
+    top: 75%;
+    left: -25%;
+    transform-origin: center;
+  }
+  
+  /* Add the "uh-oh" images to the page */
+  .uh-oh-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+  }
+  
+  .uh-oh-container img {
+    position: relative;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }  
 </style>
 
 <div class="container">
@@ -28,5 +97,11 @@ layout: 404
     <h2 style="border: 12px inset #a758ecb6; display: inline-block; padding: 1px; font-size: 28px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; -webkit-text-fill-color: #b27ce1;">Return back to Superkat's Awesome Website</h2>
   </a>
   <h1>404</h1>
-  <p style="font-size: 25px;">The requested page could not be found :(</p>
+  <p style="font-size: 25px;">The requested page could not be found</p>
+  <div class="uh-oh-container">
+    <img src="../assets/images/uhoh.png" alt="Uh-oh" class="uh-oh">
+    <img src="../assets/images/uhoh.png" alt="Uh-oh" class="uh-oh">
+    <img src="../assets/images/uhoh.png" alt="Uh-oh" class="uh-oh">
+    <img src="../assets/images/uhoh.png" alt="Uh-oh" class="uh-oh">
+  </div>
 </div>

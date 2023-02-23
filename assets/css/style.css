@@ -81,24 +81,69 @@
   }
 
   .matrix-bg {
-    background: #000;
+    background: url(../images/bkg.png);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: 100% 50%;
     position: relative;
     animation: matrix-bg 7s ease-in-out infinite, matrix-right-to-left 10s linear infinite alternate;
+    z-index: -1;
   }
   
-  .matrix-bg-alt {
-    background: #000;
-    background-size: auto auto;
-    position: relative;
-    animation: matrix-bg 15s ease-in-out infinite reverse, matrix-right-to-left 10s linear infinite alternate;
+  .matrix-bg-2 {
+    background: url(../images/smallCode.png) center center/cover no-repeat;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-position: center center ;
+    background-size: 10%;
+    animation: fade-in 12s ease-in-out, matrix-bg 7s ease-in-out infinite, matrix-right-to-left 10s linear infinite alternate;
+    z-index: -1;
   }
 
+  .matrix-bg-3 {
+    background: url(../images/bigCode.png) center center/cover no-repeat;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-position: center center ;
+    background-size: 10%;
+    animation: fade-in 12s ease-in-out, matrix-bg 15s ease-in-out reverse infinite, matrix-right-to-left 10s linear infinite;
+    z-index: -1;
+  }
+  
   .matrix-transition {
-    background: #0e0b17;
+    background: #16171c;
     transition: 3s ease-in-out;
   }
 
+
+  .hampter {
+    background: url(../images/hampter.jpg) center center/cover no-repeat;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-position: center center ;
+    background-size: 30%;
+    z-index: -1;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   
   @keyframes matrix-bg {
     0% {
@@ -115,6 +160,24 @@
     }
     100% {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%' y='10%' font-size='17' text-anchor='middle' fill='%230f0'%3E%3Ctspan dy='0.3em'%3ECoding...%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+    }
+  }
+
+  @keyframes matrix-bg-small {
+    0% {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='12%' y='11%' font-size='7' text-anchor='middle' fill='%230f0'%3E%3Ctspan dy='0.3em'%3ECoding...%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+    }
+    25% {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='57%' y='29%' font-size='8' text-anchor='middle' fill='%230f0'%3E%3Ctspan dy='0.3em'%3E01010101...%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+    }
+    50% {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='48%' y='73%' font-size='12' text-anchor='middle' fill='%230f0'%3E%3Ctspan dy='0.3em'%3E10101010...%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+    }
+    75% {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%' y='53%' font-size='13' text-anchor='middle' fill='%230f0'%3E%3Ctspan dy='0.3em'%3E01010101...%3C/tspan%3E%3C/text%3E%3C/svg%3E");
+    }
+    100% {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%' y='13%' font-size='11' text-anchor='middle' fill='%230f0'%3E%3Ctspan dy='0.3em'%3ECoding...%3C/tspan%3E%3C/text%3E%3C/svg%3E");
     }
   }
 

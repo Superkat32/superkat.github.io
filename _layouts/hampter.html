@@ -60,39 +60,45 @@
     </header>
     <div class="container">
       <section id="main_content">
-        <script>
-          // const canvas = document.getElementById('matrix-canvas');
-          // const context = canvas.getContext('2d');
-          
-          // // Set the initial color and fill the canvas
-          // context.fillStyle = '#000000';
-          // context.fillRect(0, 0, canvas.width, canvas.height);
-
-          // // Update the canvas every 30 milliseconds
-          // setInterval(() => {
-            //   // Get the current pixel data for the canvas
-          //   const pixelData = context.getImageData(0, 0, canvas.width, canvas.height);
-
-          //   // Loop through the pixel data and update each pixel
-          //   for (let i = 0; i < pixelData.data.length; i += 4) {
-            //     // Update the pixel color and/or transparency as desired
-            //     pixelData.data[i] = Math.floor(Math.random() * 256);  // Red channel
-          //     pixelData.data[i+1] = Math.floor(Math.random() * 256);  // Green channel
-          //     pixelData.data[i+2] = Math.floor(Math.random() * 256);  // Blue channel
-          //     pixelData.data[i+3] = 255;  // Alpha channel (fully opaque)
-          //   }
-          
-          //   // Write the updated pixel data back to the canvas
-          //   context.putImageData(pixelData, 0, 0);
-          // }, 30);
-          
+        <script>          
           setTimeout(function() {
             document.body.classList.add('matrix-transition');
             document.body.classList.add('matrix-bg');
-            document.body.classList.add('matrix-bg-alt');
-          }, 3000);
+          }, 17000);
           </script>
         {{ content }}
+        <div class="hampter-container">
+          <div class="hampter"></div>
+        </div>
+        <div class="matrix-bg-2-container">
+          <div class="matrix-bg-2"></div>
+        </div>
+        <div class="matrix-bg-3-container">
+          <div class="matrix-bg-3"></div>
+        </div>
+
+        <script>
+          const image = document.getElementById('glitch-image');
+
+          // Set up glitch effect with random offsets
+          function glitch() {
+            image.style.transform = `translate(${Math.random()}px, ${Math.random()}px)`;
+            image.style.filter = `contrast(1) brightness(1) hue-rotate(${Math.random() * 360}deg)`;
+          }
+
+          // Start glitch effect and increase intensity over time
+          let intensity = 0;
+          const glitchInterval = setInterval(() => {
+            glitch();
+            intensity += 1;
+            if (intensity >= 17) {
+              clearInterval(glitchInterval);
+              image.style.transform = 'none';
+              image.style.filter = 'none';
+            }
+          }, 1000);
+
+        </script>
         <canvas id="matrix-canvas"></canvas>
       </section>
     </div>

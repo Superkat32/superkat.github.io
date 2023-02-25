@@ -60,19 +60,20 @@
     </header>
     <div class="container">
       <section id="main_content">
-        <button id="begin-btn">Play Video</button>
         <!-- Poison - Aim To Head (Found on YouTube) -->
         <audio id="bg-music" src="../assets/audio/poison.mp3" loop></audio>
-        Your browser does not support the audio element.
         </audio>
         <div id="player"></div>
         <script>          
           // setTimeout(function() {
-          //   document.body.classList.add('matrix-transition');
-          //   document.body.classList.add('matrix-bg');
-          // }, 17000);
-          </script>
+            //   document.body.classList.add('matrix-transition');
+            //   document.body.classList.add('matrix-bg');
+            // }, 17000);
+            </script>
         {{ content }}
+        <button id="begin-btn" class="button-position, button-animation, button-center">
+          <img src="../assets/images/hampter.jpg" />
+        </button>
 
         <!-- <script>
           const image = document.getElementById('glitch-image');
@@ -101,22 +102,31 @@
             const beginBtn = document.getElementById("begin-btn");
             const animationContainer = document.querySelector(".animation-container");
             const bgMusic = document.getElementById("bg-music");
+            let isFirstClick = true;
 
             function play() {
               bgMusic.play();
             }
 
             beginBtn.addEventListener("click", () => {
-            if (bgMusic.paused) {
-              bgMusic.play();
-              beginBtn.textContent = "Pause audio";
-              console.log('Audio now playing');
-            } else {
-              bgMusic.pause();
-              beginBtn.textContent = "Play audio";
-              console.log('Audio now paused');
-            }
+              if (bgMusic.paused) {
+                bgMusic.play();
+                beginBtn.classList.add('button-animation');
+                console.log('Audio now playing');
+              } else {
+                bgMusic.pause();
+                beginBtn.classList.remove('button-animation');
+                console.log('Audio now paused');
+              }
+              if (isFirstClick) {
+                beginBtn.classList.remove('button-small', 'button-center');
+                beginBtn.classList.add('button-clicked', 'button-volume-position');
+                isFirstClick = false;
+              }
+
+            });
           });
+
 
             // beginBtn.addEventListener("click", () => {
             //   // start the animation by adding the "show" class to the container
@@ -126,7 +136,6 @@
             //   // play the background music
             //   play();
             // });
-          });
 
           // Load the IFrame Player API code asynchronously
           // const tag = document.createElement('script');

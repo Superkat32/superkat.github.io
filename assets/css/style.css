@@ -80,14 +80,51 @@
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   }
 
-  #play-btn {
-    text-align: center;
-    z-index: 9999;
+  
+  .button-clicked {
+    /* after click class */
+    width: 75px;
+    height: 75px;
   }
   
-  #begin::after {
-    content: url(../images/bullet.png);
+  .button-small {
+    /* unused?? */
+    width: 10px;
+    height: 10px;
   }
+  
+  .button-position {
+    /* inital position */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+
+  .button-center {
+    width: auto;
+    margin: auto;
+    display: block;
+  }
+
+  .button-animation {
+    animation: size-hampter 2s ease-in-out alternate infinite;
+  }
+
+  .button-volume-position {
+    /* another after-click position */
+    position: absolute;
+    top: 80%;
+    margin-left: 70%;
+  }
+
+  @keyframes size-hampter {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }  
   
   .matrix-bg {
     background: url(../images/bkg.png);

@@ -80,6 +80,15 @@
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   }
 
+  #play-btn {
+    text-align: center;
+    z-index: 9999;
+  }
+  
+  #begin::after {
+    content: url(../images/bullet.png);
+  }
+  
   .matrix-bg {
     background: url(../images/bkg.png);
     top: 0;
@@ -95,7 +104,7 @@
   .matrix-bg-2 {
     background: url(../images/smallCode.png) center center/cover no-repeat;
     position: fixed;
-    top: 15%;
+    top: 35%;
     right: 0%;
     width: 100%;
     height: 100%;
@@ -108,7 +117,7 @@
   .matrix-bg-3 {
     background: url(../images/bigCode.png) center center/cover no-repeat;
     position: fixed;
-    top: 15%;
+    top: 45%;
     right: 0%;
     width: 100%;
     height: 100%;
@@ -122,7 +131,6 @@
     background: #16171c;
     transition: 3s ease-in-out;
   }
-
 
   .hampter {
     background: url(../images/hampter.jpg) center center/cover no-repeat;
@@ -142,6 +150,15 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
     }
   }
   

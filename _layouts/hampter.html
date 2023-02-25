@@ -21,7 +21,7 @@
 
 <!-- You can set your favicon here -->
 <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-<link rel="icon" type="image/x-icon" href="/hampter.jpg">
+<link rel="icon" type="image/x-icon" href="../assets/images/hampter.jpg">
 
 <!-- end custom head snippets -->
 
@@ -60,24 +60,21 @@
     </header>
     <div class="container">
       <section id="main_content">
+        <button id="begin-btn">Play Video</button>
+        <!-- Poison - Aim To Head (Found on YouTube) -->
+        <audio id="bg-music" src="../assets/audio/poison.mp3" loop></audio>
+        Your browser does not support the audio element.
+        </audio>
+        <div id="player"></div>
         <script>          
-          setTimeout(function() {
-            document.body.classList.add('matrix-transition');
-            document.body.classList.add('matrix-bg');
-          }, 17000);
+          // setTimeout(function() {
+          //   document.body.classList.add('matrix-transition');
+          //   document.body.classList.add('matrix-bg');
+          // }, 17000);
           </script>
         {{ content }}
-        <div class="hampter-container">
-          <div class="hampter"></div>
-        </div>
-        <div class="matrix-bg-2-container">
-          <div class="matrix-bg-2"></div>
-        </div>
-        <div class="matrix-bg-3-container">
-          <div class="matrix-bg-3"></div>
-        </div>
 
-        <script>
+        <!-- <script>
           const image = document.getElementById('glitch-image');
 
           // Set up glitch effect with random offsets
@@ -98,8 +95,101 @@
             }
           }, 1000);
 
+        </script> -->
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const beginBtn = document.getElementById("begin-btn");
+            const animationContainer = document.querySelector(".animation-container");
+            const bgMusic = document.getElementById("bg-music");
+
+            function play() {
+              bgMusic.play();
+            }
+
+            beginBtn.addEventListener("click", () => {
+            if (bgMusic.paused) {
+              bgMusic.play();
+              beginBtn.textContent = "Pause audio";
+              console.log('Audio now playing');
+            } else {
+              bgMusic.pause();
+              beginBtn.textContent = "Play audio";
+              console.log('Audio now paused');
+            }
+          });
+
+            // beginBtn.addEventListener("click", () => {
+            //   // start the animation by adding the "show" class to the container
+            //   // animationContainer.classList.add('.show');
+            //   console.log('yay');
+                      
+            //   // play the background music
+            //   play();
+            // });
+          });
+
+          // Load the IFrame Player API code asynchronously
+          // const tag = document.createElement('script');
+          // tag.src = 'https://www.youtube.com/iframe_api';
+          // const firstScriptTag = document.getElementsByTagName('script')[0];
+          // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          // let player;
+
+          
+          // // Create a function to create the player
+          // function onYouTubeIframeAPIReady() {
+          //   player = new YT.Player('player', {
+          //     height: '0px',
+          //     width: '0px',
+          //     videoId: '-PQR1zTyAWQ',
+          //     playerVars: {
+          //       'autoplay': 1,
+          //       'controls': 1,
+          //       'rel': 0,
+          //       'showinfo': 0,
+          //       'start': 1,
+          //       'loop': 1 // set loop to 1 to play the video repeatedly
+          //     }
+          //   });
+          // }
+          
+          // Add a click event listener to the play button
+          // const playBtn = document.getElementById('play-btn');
+          // playBtn.addEventListener('click', () => {
+          //   const videoContainer = document.getElementById('video-container');
+          //   const video = document.createElement('iframe');
+          //   video.src = 'https://www.youtube.com/embed/-PQR1zTyAWQ';
+          //   video.allowFullscreen = true;
+          //   // document.querySelector('.container').appendChild(video);
+            
+          //   // play the video when it is ready
+          //   video.addEventListener('canplay', () => {
+          //     console.log('pressed!');
+          //     video.play();
+          //   });
+            
+          //   // create the matrix-bg-2 element
+          //   const matrixBg2Container = document.createElement('div');
+          //   matrixBg2Container.className = 'matrix-bg-2-container';
+          //   const matrixBg2 = document.createElement('div');
+          //   matrixBg2.className = 'matrix-bg-2';
+          //   matrixBg2Container.appendChild(matrixBg2);
+          //   document.body.appendChild(matrixBg2Container);
+  
+          //   // create the matrix-bg-3 element
+          //   const matrixBg3Container = document.createElement('div');
+          //   matrixBg3Container.className = 'matrix-bg-3-container';
+          //   const matrixBg3 = document.createElement('div');
+          //   matrixBg3.className = 'matrix-bg-3';
+          //   matrixBg3Container.appendChild(matrixBg3);
+          //   document.body.appendChild(matrixBg3Container);
+          // });
+
+
         </script>
         <canvas id="matrix-canvas"></canvas>
+
       </section>
     </div>
   </body>

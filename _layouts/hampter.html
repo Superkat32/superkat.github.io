@@ -71,7 +71,7 @@
             // }, 17000);
             </script>
         {{ content }}
-        <button id="begin-btn" class="button-position, button-animation, button-center">
+        <button id="begin-btn" class="button-position, button-animation-before-click">
           <img src="../assets/images/hampter.jpg" />
         </button>
 
@@ -119,8 +119,8 @@
                 console.log('Audio now paused');
               }
               if (isFirstClick) {
-                beginBtn.classList.remove('button-small', 'button-center');
-                beginBtn.classList.add('button-clicked', 'button-volume-position');
+                beginBtn.classList.remove('button-small', 'button-center', 'button-animation-before-click');
+                beginBtn.classList.add('button-clicked', 'button-volume-position', 'button-animation');
                 isFirstClick = false;
               }
 

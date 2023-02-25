@@ -106,6 +106,13 @@
     display: block;
   }
 
+  .button-animation-before-click {
+    animation: size-hampter 2s ease-in-out alternate infinite;
+    width: auto;
+    margin: auto;
+    display: block;
+  }
+
   .button-animation {
     animation: size-hampter 2s ease-in-out alternate infinite;
   }

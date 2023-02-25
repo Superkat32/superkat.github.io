@@ -64,14 +64,8 @@
         <audio id="bg-music" src="../assets/audio/poison.mp3" loop></audio>
         </audio>
         <div id="player"></div>
-        <script>          
-          // setTimeout(function() {
-            //   document.body.classList.add('matrix-transition');
-            //   document.body.classList.add('matrix-bg');
-            // }, 17000);
-            </script>
         {{ content }}
-        <button id="begin-btn" class="button-position, button-animation-before-click">
+        <button id="begin-btn" style="background-color: transparent; border-color: midnightblue; border-radius: -5px; border-style: dashed;" class="button-position, button-animation-before-click">
           <img src="../assets/images/hampter.jpg" />
         </button>
 
@@ -104,18 +98,19 @@
             const bgMusic = document.getElementById("bg-music");
             let isFirstClick = true;
 
-            function play() {
-              bgMusic.play();
-            }
-
+            
+            
             beginBtn.addEventListener("click", () => {
               if (bgMusic.paused) {
                 bgMusic.play();
+                playAnimation();
                 beginBtn.classList.add('button-animation');
+                beginBtn.innerHTML = '<img src="../assets/images/volumeOn.png" />';
                 console.log('Audio now playing');
               } else {
                 bgMusic.pause();
                 beginBtn.classList.remove('button-animation');
+                beginBtn.innerHTML = '<img src="../assets/images/volumeOff.png" />';
                 console.log('Audio now paused');
               }
               if (isFirstClick) {
@@ -123,8 +118,16 @@
                 beginBtn.classList.add('button-clicked', 'button-volume-position', 'button-animation');
                 isFirstClick = false;
               }
-
+              
             });
+
+            function playAnimation() {
+              setTimeout(function() {
+                document.body.classList.add('matrix-transition');
+                document.body.classList.add('matrix-bg');
+              }, 18000);
+            }
+
           });
 
 

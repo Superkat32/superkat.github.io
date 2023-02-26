@@ -66,7 +66,7 @@
         <div id="player"></div>
         {{ content }}
         <button id="begin-btn" style="background-color: transparent; border-color: midnightblue; border-radius: 40px; border-style: dashed;" class="button-position, button-animation-before-click">
-          <img src="../assets/images/hampter.jpg" />
+          <img id="play-pause-icon" src="../assets/images/hampter.jpg" />
         </button>
 
         <!-- <script>
@@ -96,30 +96,43 @@
             const beginBtn = document.getElementById("begin-btn");
             const animationContainer = document.querySelector(".animation-container");
             const bgMusic = document.getElementById("bg-music");
+            const playPauseIcon = document.getElementById("play-pause-icon");
             let isFirstClick = true;
 
-            
+            var x = document.getElementById("bg-music");
+
+            function toggleMute() {
+              x.muted = !x.muted;
+              playPauseIcon.src = x.muted ? "../assets/images/volumeOff.png" : "../assets/images/volumeOn.png";
+            }
             
             beginBtn.addEventListener("click", () => {
               if (bgMusic.paused) {
-                bgMusic.play();
-                playAnimation();
+                if (!isFirstClick) {
+                  toggleMute();
+                } else {
+                  playPauseIcon.src = "../assets/images/volumeOn.png";
+                }
                 beginBtn.classList.add('button-animation');
-                beginBtn.innerHTML = '<img src="../assets/images/volumeOn.png" />';
+                playAnimation();
                 console.log('Audio now playing');
+                // beginBtn.innerHTML = '<img src="../assets/images/volumeOn.png" />';
               } else {
-                bgMusic.pause();
+                toggleMute();
                 beginBtn.classList.remove('button-animation');
-                beginBtn.innerHTML = '<img src="../assets/images/volumeOff.png" />';
-                console.log('Audio now paused');
+                // beginBtn.innerHTML = '<img src="../assets/images/volumeOff.png" />';
+                console.log('Audio now muted');
               }
               if (isFirstClick) {
+                bgMusic.play();
                 beginBtn.classList.remove('button-small', 'button-center', 'button-animation-before-click');
                 beginBtn.classList.add('button-clicked', 'button-volume-position', 'button-animation');
                 isFirstClick = false;
               }
               
             });
+
+            playPauseBtn.addEventListener("click", toggleMute);
 
             function playAnimation() {
               setTimeout(function() {

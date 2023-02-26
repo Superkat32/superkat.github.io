@@ -119,8 +119,15 @@
 
   .button-volume-position {
     /* another after-click position */
-    position: absolute;
+    position: fixed;
     top: 80%;
+    margin-left: 70%;
+  }
+
+  .button-volume-position-after-matrix {
+    /* another after-click position */
+    position: fixed;
+    top: 120%;
     margin-left: 70%;
   }
 
@@ -142,7 +149,7 @@
     background-size: 100% 50%;
     position: relative;
     animation: matrix-bg 7s ease-in-out infinite, matrix-right-to-left 10s linear infinite alternate;
-    z-index: -1;
+    z-index: -2;
   }
   
   .matrix-bg-2 {
@@ -155,7 +162,7 @@
     background-position: center center ;
     background-size: 10%;
     animation: fade-in 12s ease-in-out, matrix-bg 7s ease-in-out infinite, matrix-right-to-left 10s linear infinite alternate;
-    z-index: -1;
+    z-index: -2;
   }
 
   .matrix-bg-3 {
@@ -168,12 +175,13 @@
     background-position: center center ;
     background-size: 10%;
     animation: fade-in 12s ease-in-out, matrix-bg 15s ease-in-out reverse infinite, matrix-right-to-left 10s linear infinite;
-    z-index: -1;
+    z-index: -2;
   }
   
   .matrix-transition {
     background: #16171c;
     transition: 3s ease-in-out;
+    z-index: -2;
   }
 
   .hampter {

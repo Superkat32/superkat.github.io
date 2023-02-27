@@ -700,7 +700,51 @@
   }
   
   /* Buttons
-  */
+  */ 
+  #downloads {
+    display: none;
+  } 
+  
+  #downloads.show {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 7px;
+  }
+
+  @media (max-width: 600px) {
+    #downloads.show {
+      grid-template-columns: none;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+
+  .mainNavBtn {
+    display: inline-block;
+    background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+    background-color: #cce4e040;
+    background-image: url(../images/home.png);
+    background-size: cover;
+    padding: 28px 28px;
+    border-radius: 50px;
+    border: 2px solid rgba(84, 13, 143, 0.7);
+    border-bottom: 2px solid rgba(53, 4, 99, 0.7);
+    border-top: 2px solid rgb(101, 53, 184);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    animation: shrink 0.3s ease-out;
+    animation-play-state: running;
+  }
+
+  .mainNavBtn:hover {
+    animation: grow 2s ease-in-out alternate infinite;
+  }
+
   .btn {
     display: inline-block;
     background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
@@ -747,6 +791,12 @@
   .btn-aboutme .icon {
     opacity: 1.0;
     background: url("../images/aboutme.png") 0 0 no-repeat;
+    background-size: 110%;
+  }
+
+  .btn-hampter .icon {
+    opacity: 1.0;
+    background: url("../images/hampter.jpg") 0 0 no-repeat;
     background-size: 110%;
   }
   

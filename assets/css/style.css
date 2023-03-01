@@ -541,6 +541,7 @@
   
   li {
     line-height: 1.4;   
+    list-style: none;
   }
   
   /* Header, <header>
@@ -671,8 +672,12 @@
     font-weight: bold;
   }
   
-  ul li {
-    list-style-image: url("../images/bullet.png");
+  ul li::before {
+    /* This wasn't supposed to create the output it did, but I liked it soooo */
+    /* background-image: url("../images/code.png"); */
+    content: "\2022";
+    color: #85fb89;
+    margin-bottom: -10px;
   }
   
   blockquote {
@@ -872,7 +877,24 @@
   a:hover {
     text-decoration-line: underline;
   }
-
-
+     
+  .text-fade-in {
+    opacity: 0;
+    animation: fadeIn 5s ease-in-out forwards;
+  }
   
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    75% {
+      opacity: 0;
+      transform: translateY(20px);
+    }  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   /*# sourceMappingURL=style.css.map */

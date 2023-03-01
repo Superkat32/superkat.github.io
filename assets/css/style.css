@@ -674,11 +674,11 @@
   
   ul li::before {
     /* This wasn't supposed to create the output it did, but I liked it soooo */
-    /* background-image: url("../images/code.png"); */
+    /* background-image: url("../images/code.png"); */ 
     content: "\2022";
     color: #85fb89;
     margin-bottom: -10px;
-  }
+  }  
   
   blockquote {
     color: #aaa;
@@ -882,19 +882,24 @@
     opacity: 0;
     animation: fadeIn 5s ease-in-out forwards;
   }
+
+  .text-fade-in-2 {
+    opacity: 0;
+    animation: fadeIn 7s ease-in-out forwards;
+  }      
   
   @keyframes fadeIn {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(20px); 
     }
     75% {
       opacity: 0;
       transform: translateY(20px);
-    }  
+    } 
     100% {
       opacity: 1;
       transform: translateY(0);
     }
-  }
+  } 
   /*# sourceMappingURL=style.css.map */

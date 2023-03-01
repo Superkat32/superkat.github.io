@@ -15,7 +15,7 @@ window.onload = () => {
     let iterations = 0;
 
     const interval = setInterval(() => {
-      console.log("text is being hovered over!");
+      console.log("Title Text is being randomized!");
       h1.innerText = h1.dataset.value
         .split("")
         .map((letter, index) => {

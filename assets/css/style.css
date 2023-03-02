@@ -908,7 +908,7 @@
     width: 100%;
   }
   
-  .codinglanguages-container {
+  .rightimage-container {
     display: block;
     margin: 0 auto;
     width: 80%;
@@ -932,7 +932,7 @@
       margin-left: 20px;
     } */
 
-    .codinglanguages-container {
+    .rightimage-container {
       display: block;
       float: right; 
       width: 50%;

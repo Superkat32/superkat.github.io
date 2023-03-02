@@ -939,4 +939,36 @@
       max-width: 500px;
     }
   }
+
+  .leftimage-container {
+    display: block;
+    margin: 10px;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  /* CSS for horizontal screens */
+  @media (orientation: landscape) {
+    .text-container {
+      width: 50%;
+      float: left;
+    }
+    
+
+    /* .container {
+      flex-direction: row;
+    }
+  
+    .image-container {
+      width: 30%;
+      margin-left: 20px;
+    } */
+
+    .leftimage-container {
+      display: block;
+      float: left; 
+      width: 50%;
+      max-width: 500px;
+    }
+  }
   /*# sourceMappingURL=style.css.map */

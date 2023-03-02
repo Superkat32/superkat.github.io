@@ -38,34 +38,6 @@ window.addEventListener("beforeunload", () => {
   localStorage.removeItem(visitedKey);
 });
 </script>
-<style>
-  /* CSS for vertical screens */
-  .text-container {
-    width: 100%;
-  }
-  
-  .image-container {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 500px;
-  }
-  
-  /* CSS for horizontal screens */
-  @media (orientation: landscape) {
-    .text-container {
-      width: 50%;
-      float: left;
-    }
-    
-    .image-container {
-      display: block;
-      float: right;
-      width: 50%;
-      max-width: 500px;
-    }
-  }
-</style>
 
 <h1 id="demo" style="border: 7px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;"></h1>
 <script>
@@ -93,7 +65,7 @@ function typeWriter() {
 this.typeWriter();
 </script>
 <div class="text-fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-  <div class="image-container">
+  <div class="codinglanguages-container">
     <img src="../assets/images/codingLanguages.png">
   </div>
   <div class="text-container">
@@ -109,7 +81,7 @@ this.typeWriter();
 <p></p>
 </div>
 <div class="text-fade-in-2" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-    <h1>&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt; was my first big project.</h1>
+    <h1>&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;: My first big project.</h1>
     <p>Started in mid-2022, Broken Lead Warner is a Minecraft mod which alerts you if your in-game lead item snaps. After 4 months of on/off work, Broken Lead Warner was released on October 7th, 2022.</p>
 </div>
 

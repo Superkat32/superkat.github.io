@@ -753,9 +753,9 @@
   }
 
   @keyframes rotate-nav-button {
-    0% {
+    0% {   
       transform: rotate(0deg);
-    }
+    } 
     100% {
       transform: scale(180deg);
     }
@@ -956,5 +956,13 @@
     .topimage-container img {
       margin-right: 20px; 
     }
+  }    
+  
+  .statcard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 75%;
   }
+
   /*# sourceMappingURL=style.css.map */

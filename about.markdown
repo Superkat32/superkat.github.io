@@ -64,7 +64,7 @@ function typeWriter() {
 
 this.typeWriter();
 </script>
-<div class="text-fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <div class="rightimage-container">
     <img src="../assets/images/codingLanguages.png">
   </div>
@@ -80,7 +80,7 @@ this.typeWriter();
 <div>
 <p></p>
 </div>
-<div class="text-fade-in-2" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <div class="leftimage-container">
     <img src="../assets/images/BrokenLeadWarner.png">
   </div>
@@ -91,7 +91,7 @@ this.typeWriter();
 <div>
 <p></p>
 </div>
-<div class="text-fade-in-2" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <div class="topimage-container">
     <img src="../assets/images/githublogo.jpg">
   </div>
@@ -100,4 +100,18 @@ this.typeWriter();
 <p style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">My next project failed, but I learned a lot about Minecraft's particle system from it and applied it to the next project, &lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;. Explosive Enhancement is by far my favorite and my most popular mod on Modrinth. It took only around a week because I had set a deadline for myself to finish it so I could release it on the first day of the new year.</p>
 <p style="border: 3px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">That is my coding journey thus far. I still have a lot more to be excited about, however! I'm only getting better at Java every project, and I plan on learning even more coding releated stuff soon!</p>
 
+<script>
+  const fadeIns = document.querySelectorAll('.fade-in');
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.style.opacity = '1';
+      }
+    });
+  });
+
+  fadeIns.forEach(fadeIn => {
+    observer.observe(fadeIn);
+  });
+</script>

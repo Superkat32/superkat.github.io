@@ -877,32 +877,12 @@
   a:hover {
     text-decoration-line: underline;
   }
-     
-  .text-fade-in {
+   
+  .fade-in {
     opacity: 0;
-    animation: fadeIn 5s ease-in-out forwards;
-  }
-
-  .text-fade-in-2 {
-    opacity: 0;
-    animation: fadeIn 7s ease-in-out forwards;
-  }      
+    transition: opacity 1.5s ease-in-out;
+  }    
   
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px); 
-    }
-    75% {
-      opacity: 0;
-      transform: translateY(20px); 
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0); 
-    }
-  } 
-
   /* CSS for vertical screens */
   .text-container {
     width: 100%;
@@ -920,7 +900,7 @@
     .text-container {
       width: 50%;
       float: left;
-    }
+    } 
 
     .rightimage-container {
       display: block;
@@ -937,7 +917,7 @@
     max-width: 500px;
   }
   
-  /* CSS for horizontal screens */
+  /* CSS for horizontal screens */  
   @media (orientation: landscape) {
     .text-container {
       width: 50%;

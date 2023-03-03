@@ -674,7 +674,7 @@
   
   ul li::before {
     /* This wasn't supposed to create the output it did, but I liked it soooo */
-    /* background-image: url("../images/code.png"); */ 
+    /* background-image: url("../images/code.png"); */
     content: "\2022";
     color: #85fb89;
     margin-bottom: -10px;

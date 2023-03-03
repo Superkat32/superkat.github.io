@@ -15,41 +15,6 @@ layout: default
   }
 </style>
 
-<script>
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const visitedKey = "visited";
-
-window.onload = () => {
-  const h1 = document.querySelector("h1");
-
-  if (!localStorage.getItem(visitedKey)) {
-    let iterations = 0;
-
-    const interval = setInterval(() => {
-      console.log("Title Text is being randomized!");
-      h1.innerText = h1.dataset.value
-        .split("")
-        .map((letter, index) => {
-          if (index < iterations) {
-            return h1.dataset.value[index];
-          }
-
-          return letters[Math.floor(Math.random() * 26)];
-        })
-        .join("");
-
-      if (iterations >= h1.dataset.value.length) clearInterval(interval);
-
-      iterations += 1 / 3;
-    }, 30);
-  }
-};
-
-window.addEventListener("beforeunload", () => {
-  localStorage.removeItem(visitedKey);
-});
-</script>
-
 <h1 id="demo" style="border: 7px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;"></h1>
 <script>
 var i = -1;

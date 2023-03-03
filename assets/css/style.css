@@ -921,16 +921,6 @@
       width: 50%;
       float: left;
     }
-    
-
-    /* .container {
-      flex-direction: row;
-    }
-  
-    .image-container {
-      width: 30%;
-      margin-left: 20px;
-    } */
 
     .rightimage-container {
       display: block;
@@ -953,16 +943,6 @@
       width: 50%;
       float: left;
     }
-    
-
-    /* .container {
-      flex-direction: row;
-    }
-  
-    .image-container {
-      width: 30%;
-      margin-left: 20px;
-    } */
 
     .leftimage-container {
       display: block;

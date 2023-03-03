@@ -124,7 +124,7 @@ this.typeWriter();
 <div class="fade-in" style="text-align: center; border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <p>I'm also very active on GitHub in general.</p>
   <div class="statcard-container">
-    <img src="https://github-readme-stats.vercel.app/api?username=superkat32&show_icons=true&theme=ocean_dark&hide=contribs">
+    <img src="https://github-readme-stats.vercel.app/api?username=superkat32&show_icons=true&theme=ocean_dark&hide=contribs&title_color=a758ec&text_color=67f76c&border_color=a758ec">
   </div>
 </div>
 

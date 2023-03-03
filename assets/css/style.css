@@ -765,7 +765,7 @@
     display: inline-block;
     background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
     background-color: #cce4e040;
-    background-image: url(../images/menu.png);
+    background-image: url(../images/morePortrait.png);
     background-size: cover;
     background-position: 50%;
     padding: 24px 24px;
@@ -783,6 +783,12 @@
     transform: scale(0.9);
     animation: shrink-dropdown 0.3s ease-out;
     animation-play-state: running;
+  }
+  
+  @media (orientation: landscape) {
+    .mainNavBtn {
+      background-image: url(../images/moreLandscape.png);
+    }
   }
   
   .mainNavBtn:hover {

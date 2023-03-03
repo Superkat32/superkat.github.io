@@ -99,8 +99,15 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<p style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">My next project failed, but I learned a lot about Minecraft's particle system from it and applied it to the next project, &lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;. Explosive Enhancement is by far my favorite and my most popular mod on Modrinth. It took only around a week because I had set a deadline for myself to finish it so I could release it on the first day of the new year.</p>
-<p style="border: 3px inset #a758ecb6; display: inline-flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">That is my coding journey thus far. I still have a lot more to be excited about, however! I'm only getting better at Java every project, and I plan on learning even more coding releated stuff soon!</p>
+<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  <div class="rightimage-container">
+    <img src="../assets/images/explosiveicon.png">
+  </div>
+  <h1>&lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;</h1>
+  <p>The second released Minecraft mod of mine. Started in late December of 2022 and released on January 1st, 2023, this mod makes the visual effect of explosions cooler. Explosive Enhancement is also my most popular mod and my favorite mod.</p>
+</div>
+
+<div><p></p></div>
 
 <div class="fade-in" style="text-align: center; border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <p>I'm also very active on GitHub in general.</p>

@@ -939,7 +939,7 @@
       max-width: 500px;
     }
   }
-
+  
   .leftimage-container {
     display: block;
     margin: 0 auto;
@@ -970,6 +970,25 @@
       float: left; 
       width: 50%;
       max-width: 500px;
+    }
+  }
+
+  .topimage-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 75%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .topimage-container {
+      flex-direction: row; 
+      justify-content: flex-start;
+      align-items: center; 
+    } 
+    
+    .topimage-container img {
+      margin-right: 20px; 
     }
   }
   /*# sourceMappingURL=style.css.map */

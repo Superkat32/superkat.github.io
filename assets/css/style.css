@@ -786,7 +786,7 @@
   }
   
   @media (orientation: landscape) {
-    .mainNavBtn {
+    .mainNavBtn { 
       background-image: url(../images/moreLandscape.png);
     }
   }

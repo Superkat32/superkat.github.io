@@ -380,7 +380,7 @@
     transform-origin: center;
     z-index: -1;
   }
-
+ 
   .star-container:nth-of-type(4) .star-4 {
     background: url('../images/star4.png') no-repeat center center/contain;
     position: absolute;

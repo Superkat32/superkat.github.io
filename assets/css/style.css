@@ -305,7 +305,7 @@
   }
   
   .galaxy {
-    background: url(../images/galaxy.png) center center/cover no-repeat;
+    background: url(../images/galaxy.png) no-repeat center center/contain;
     /* background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -313,13 +313,14 @@
     position: fixed; */
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
     top: 37%;
     right: 40%;
     overflow: auto;
     background-size: 40%;
+    transform-origin: center;
     z-index: -1;
     animation: size-galaxy 50s ease-in-out alternate infinite;
   }

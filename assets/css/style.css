@@ -319,7 +319,7 @@
     top: 37%;
     right: 40%;
     overflow: auto;
-    background-size: 40%;
+    background-size: 40%; 
     transform-origin: center;
     z-index: -1;
     animation: size-galaxy 50s ease-in-out alternate infinite;

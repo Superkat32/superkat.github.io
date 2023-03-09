@@ -324,11 +324,17 @@
     top: 37%;
     right: 40%;
     width: 100%;
-    height: 100%;
     overflow: auto;
+    height: 100%;
     animation: size-galaxy 50s ease-in-out alternate infinite;
     transform-origin: center;
     z-index: -1;
+  }
+
+  .galaxy-wrapper {
+    display: relative;
+    width: 0%;
+    padding-bottom: 0; 
   }
 
   .milkyway {

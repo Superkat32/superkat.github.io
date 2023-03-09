@@ -319,7 +319,7 @@
     top: 37%;
     right: 40%;
     background-size: 40%; 
-    transform-origin: center; */
+    transform-origin: center; */ 
     position: fixed;
     top: 37%;
     right: 40%;
@@ -330,13 +330,6 @@
     z-index: -1;
   }
   
-  .galaxy-wrapper {
-    display: relative;
-    position: sticky;
-    overflow: auto;
-    width: 0%;
-    padding-bottom: 0; 
-  }
 
   .milkyway {
     background: url('../images/milkyway.png') no-repeat center center/contain;

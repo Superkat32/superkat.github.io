@@ -311,7 +311,7 @@
     height: 100vh;
     width: 100vw;
     position: fixed; */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;
@@ -320,9 +320,15 @@
     right: 40%;
     overflow: auto;
     background-size: 40%; 
+    transform-origin: center; */
+    position: fixed;
+    top: 37%;
+    right: 40%;
+    width: 100%;
+    height: 100%;
+    animation: size-galaxy 50s ease-in-out alternate infinite;
     transform-origin: center;
     z-index: -1;
-    animation: size-galaxy 50s ease-in-out alternate infinite;
   }
 
   .milkyway {

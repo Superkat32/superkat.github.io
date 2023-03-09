@@ -71,13 +71,28 @@
   body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #040621, #255ac6);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #eaeaea;
     font-size: 16px;
     line-height: 1.5;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  }
+
+  .bg {
+    background: linear-gradient(to bottom, #040621, #255ac6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -30;
+  }
+ 
+  .content {
+    position: absolute;
+    margin-top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
   }
 
   

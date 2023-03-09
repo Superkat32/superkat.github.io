@@ -324,16 +324,16 @@
     top: 37%;
     right: 40%;
     width: 100%;
-    overflow: auto;
     height: 100%;
     animation: size-galaxy 50s ease-in-out alternate infinite;
     transform-origin: center;
     z-index: -1;
   }
-
+  
   .galaxy-wrapper {
     display: relative;
     position: sticky;
+    overflow: auto;
     width: 0%;
     padding-bottom: 0; 
   }

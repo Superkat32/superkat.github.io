@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <style>
   .boldFancyText {
     font-family: "Lobster", Times, serif;

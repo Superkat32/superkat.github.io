@@ -73,7 +73,6 @@
     padding: 0;
     background: linear-gradient(to bottom, #040621, #255ac6);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #eaeaea;
     height: 100%;
     overflow: auto;

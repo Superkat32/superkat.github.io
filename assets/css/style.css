@@ -324,7 +324,7 @@
     top: 37%;
     right: 40%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     animation: size-galaxy 50s ease-in-out alternate infinite;
     transform-origin: center;
     z-index: -1;

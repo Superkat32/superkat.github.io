@@ -219,11 +219,20 @@
   }
 
   @keyframes fade-out {
-    0% {
+    0% {       
       opacity: 1;
-    }
+    }   
     25% {
       opacity: 0;
+    }
+  }
+
+  @keyframes fadein {
+    0% {       
+      opacity: 0;
+    }
+    25% {
+      opacity: 100;  
     }
   }
   
@@ -289,7 +298,7 @@
     .spacemodeButton {
       width: 7%;
       right: 15%;
-      top: 75%;
+      top: 75%; 
     }
   }
 
@@ -933,10 +942,16 @@
     text-decoration-line: underline;
   }
    
-  .fade-in {
+  .fade-in { 
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
-  }    
+  }
+  
+  .fade-in-reverse {
+    opacity: 1;     
+    transition: opacity 1.5s ease-in-out;
+  }
+   
   
   /* CSS for vertical screens */
   .text-container {

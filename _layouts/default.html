@@ -123,54 +123,100 @@
             }
           </script>
 
+          <script>
+            let spacemode = true;
+            let canChange = true;
+            const spacemodeButton = document.getElementById("spacemodeButton");
+            spacemodeButton.addEventListener("click", () => {
+              if(!spacemode) {
+                toggleSpacemode();
+              } else {
+                toggleSpacemode();
+              }
+              console.log('horaay!')
+            });
+
+            function toggleSpacemode() {
+              if (canChange) {
+                if(!spacemode) {
+                  spacemode = true;
+                  spacemodeButton.src = './assets/images/spacemodeOn.png';
+                  document.getElementById('space').style.display = "block";
+                  // document.getElementById('main_content').style.opacity = "0";
+                  canChange = false;
+                  setTimeout(function() {
+                    document.getElementById('space').classList.add('fade-in-reverse');
+                    document.getElementById('main_content').classList.remove('fade-in');
+                  });
+                  setTimeout(function() {
+                    canChange = true;
+                  }, 1000); 
+                } else {
+                  spacemode = false;
+                  spacemodeButton.src = './assets/images/spacemodeOff.png';
+                  document.getElementById('space').classList.add('fade-in');
+                  document.getElementById('space').classList.remove('fade-in-reverse');
+                  // document.getElementById('main_content').classList.remove('fadein');
+                  canChange = false;
+                  setTimeout(function() {
+                    document.getElementById('space').style.display = "none";
+                    canChange = true;
+                  }, 1000);
+                }
+              }
+            }
+          </script>
+
       </div>
     </header>
     <div class="container">
-      <section id="main_content">        
-        <!-- Stars -->
-        <div class="star-container">
-          <div class="stars star-1"></div>
-        </div>
-        <div class="star-container">
-          <div class="stars star-2"></div>
-        </div>
-        <div class="star-container">
-          <div class="stars star-3"></div>
-        </div>
-        <div class="star-container">
-          <div class="stars star-4"></div>
-        </div>
-
-        <!-- Background Stars -->
-        <div class="star-container">
-          <div class="bgstars"></div>
-        </div>
-
-        <!-- Constellations -->
-        <div class="constellation-container">
-          <div class="constellations"></div>
-        </div>
-
-        <!-- Galaxy -->
-        <div class="galaxy-container">
-          <div class="galaxy"></div>
-        </div>
-
-        <!-- Glint -->
-        <div class="glint-container">
-          <div class="glint"></div>
-        </div>
-        
-        <!-- Milky Way -->
-        <div class="milkyway-container">
-          <div class="milkyway"></div>
-        </div>
-        <div class="milkyway-container">
-          <div class="milkywaybluestars"></div>
-        </div>
-        <div class="milkyway-container">
-          <div class="milkywayyellowstars"></div>
-        </div>
+      <section id="main_content">
+        <section id="space">
+          <!-- Stars -->
+          <div class="star-container">
+            <div class="stars star-1"></div>
+          </div>
+          <div class="star-container">
+            <div class="stars star-2"></div>
+          </div>
+          <div class="star-container">
+            <div class="stars star-3"></div>
+          </div>
+          <div class="star-container">
+            <div class="stars star-4"></div>
+          </div>
+  
+          <!-- Background Stars -->
+          <div class="star-container">
+            <div class="bgstars"></div>
+          </div>
+  
+          <!-- Constellations -->
+          <div class="constellation-container">
+            <div class="constellations"></div>
+          </div>
+  
+          <!-- Galaxy -->
+          <div class="galaxy-container">
+            <div class="galaxy"></div>
+          </div>
+  
+          <!-- Glint -->
+          <div class="glint-container">
+            <div class="glint"></div>
+          </div>
+          
+          <!-- Milky Way -->
+          <div class="milkyway-container">
+            <div class="milkyway"></div>
+          </div>
+          <div class="milkyway-container">
+            <div class="milkywaybluestars"></div>
+          </div>
+          <div class="milkyway-container">
+            <div class="milkywayyellowstars"></div>
+          </div>
+        </section> 
         {{ content }}
       </section>
     </div>

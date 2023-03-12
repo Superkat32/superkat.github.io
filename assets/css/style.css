@@ -76,21 +76,23 @@
     background: linear-gradient(to bottom, #040621, #255ac6);
     background-repeat: no-repeat; 
     background-position: center; */
+    /* background-color: rgb(124, 60, 173); */
+    background: rgb(95, 49, 175);
     color: #eaeaea;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.5;  
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   }
 
   .bg {
     background: linear-gradient(to bottom, #040621, #255ac6); 
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;                      
     background-position: center;
     height: 100vh;
     width: 100vw;
     position: fixed;
     /* z-index usage is up to you.. although there is no need of using it because the default stack context will work. */
-    z-index: -50;
+    z-index: -50;      
   }
 
   
@@ -579,7 +581,30 @@
       top: 0;
     }
   }
+
   
+  /* Top shape */
+
+  .custom-shape-divider-top-1678663726 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1678663726 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 319px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-top-1678663726 .shape-fill {
+    fill: #2C16C2;
+  }  
   
   /* General & 'Reset' Stuff */
   .container {

@@ -140,7 +140,7 @@
               if (canChange) {
                 if(!spacemode) {
                   spacemode = true;
-                  spacemodeButton.src = './assets/images/spacemodeOn.png';
+                  changeSpacemodeIcon();
                   document.getElementById('space').style.display = "block";
                   // document.getElementById('main_content').style.opacity = "0";
                   canChange = false;
@@ -153,7 +153,7 @@
                   }, 1000); 
                 } else {
                   spacemode = false;
-                  spacemodeButton.src = './assets/images/spacemodeOff.png';
+                  changeSpacemodeIcon();
                   document.getElementById('space').classList.add('fade-in');
                   document.getElementById('space').classList.remove('fade-in-reverse');
                   // document.getElementById('main_content').classList.remove('fadein');
@@ -162,6 +162,21 @@
                     document.getElementById('space').style.display = "none";
                     canChange = true;
                   }, 1000);
+                }
+              }
+            }
+            function changeSpacemodeIcon() {
+              if(!spacemode) {
+                if (window.location.pathname === '{{ site.baseurl }}') {
+                  document.getElementById('spacemodeButton').src = './assets/images/spacemodeOff.png';
+                } else {
+                  document.getElementById('spacemodeButton').src = '../assets/images/spacemodeOff.png';
+                }
+              } else {
+                if (window.location.pathname === '{{ site.baseurl }}') {
+                  document.getElementById('spacemodeButton').src = './assets/images/spacemodeOn.png';
+                } else {
+                  document.getElementById('spacemodeButton').src = '../assets/images/spacemodeOn.png';
                 }
               }
             }

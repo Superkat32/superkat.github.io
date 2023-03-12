@@ -85,14 +85,12 @@ permalink: /hampter/
 
     function playAnimation() {
         setTimeout(function() {
-        document.body.classList.add('matrix-transition');
-        document.body.classList.add('matrix-bg');
-        }, 18000);
-        setTimeout(function() {
+            document.body.classList.add('matrix-transition');
+            document.body.classList.add('matrix-bg');
             const img = document.getElementById("hampter");
             img.src = "../assets/images/hackerHampter.png";
             bg.remove();
-        }, 18010);
+        }, 18000);
     }
 
     });

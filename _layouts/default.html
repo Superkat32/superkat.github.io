@@ -112,14 +112,14 @@
 
         </script>
 
-          <img id="myImage" alt="Image" class="spacemodeButton">
+          <img id="spacemodeButton" alt="Image" class="spacemodeButton">
 
           <script>
             // set the image path based on the page location
             if (window.location.pathname === '{{ site.baseurl }}') {
-              document.getElementById('myImage').src = './assets/images/spacemodOn.png';
+              document.getElementById('spacemodeButton').src = './assets/images/spacemodeOn.png';
             } else {
-              document.getElementById('myImage').src = '../assets/images/spacemodOn.png';
+              document.getElementById('spacemodeButton').src = '../assets/images/spacemodeOn.png';
             }
           </script>
 

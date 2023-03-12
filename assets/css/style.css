@@ -272,6 +272,27 @@
     }
   }
 
+  .spacemodeButton {
+    border: 3px inset #a758ecb6;
+    border-radius: 50%;
+    background-color: rgba(52, 94, 244, 0.779);
+    display: inline-block;  
+    padding: 10px;
+    backdrop-filter: blur(0px) saturate(100%) brightness(50%);
+    font-size: 36px;
+    position: absolute;
+    top: 50px;
+    right: 75px;
+  }
+
+  @media (orientation: portrait) {
+    .spacemodeButton {
+      width: 7%;
+      right: 15%;
+      top: 75%;
+    }
+  }
+
   .glint {
     background: url(../images/glint.png) center center/cover no-repeat;
     position: absolute;
@@ -651,7 +672,7 @@
   */
   #main_content {
     width: 100%;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;    
   }
   
   section img {

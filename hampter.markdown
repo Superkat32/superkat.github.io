@@ -41,6 +41,7 @@ permalink: /hampter/
     const playPauseIcon = document.getElementById("play-pause-icon");
     let isFirstClick = true;
 
+    var bg = document.getElementById("bg");
     var x = document.getElementById("bg-music");
 
     function toggleMute() {
@@ -63,19 +64,19 @@ permalink: /hampter/
         beginBtn.classList.remove('button-animation');
         }
         if (isFirstClick) {
-        bgMusic.play();
-        beginBtn.classList.remove('button-small', 'button-center', 'button-animation-before-click');
-        beginBtn.classList.add('button-clicked', 'button-volume-position', 'button-animation');
-        const img = document.createElement("img");
-        img.src = "../assets/images/hampter.jpg";
-        img.id = "hampter";
-        img.style.display = "block";
-        img.style.marginLeft = "auto";
-        img.style.marginRight = "auto";
-        img.style.marginTop = "-12%";
-        img.style.width = "30%";
-        document.body.appendChild(img);
-        isFirstClick = false;
+            bgMusic.play();
+            beginBtn.classList.remove('button-small', 'button-center', 'button-animation-before-click');
+            beginBtn.classList.add('button-clicked', 'button-volume-position', 'button-animation');
+            const img = document.createElement("img");
+            img.src = "../assets/images/hampter.jpg";
+            img.id = "hampter";
+            img.style.display = "block";
+            img.style.marginLeft = "auto";
+            img.style.marginRight = "auto";
+            img.style.marginTop = "-12%";
+            img.style.width = "30%";
+            document.body.appendChild(img);
+            isFirstClick = false;
         }
         
     });
@@ -88,8 +89,9 @@ permalink: /hampter/
         document.body.classList.add('matrix-bg');
         }, 18000);
         setTimeout(function() {
-        const img = document.getElementById("hampter");
-        img.src = "../assets/images/hackerHampter.png";
+            const img = document.getElementById("hampter");
+            img.src = "../assets/images/hackerHampter.png";
+            bg.remove();
         }, 18010);
     }
 

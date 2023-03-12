@@ -33,7 +33,27 @@ function typeWriter() {
 
 this.typeWriter();
 </script>
-<div style="border: 3px inset #a758ecb6; display: flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">
+<div class="fade-in" style="border: 3px inset #a758ecb6; display: flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">
     <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">I'm Superkat32&lt;a.k.a Kat&gt;, and I enjoy making Minecraft mods for &lt;<a href="https://fabricmc.net/">Fabric</a>&gt;, and uploading them to &lt;<a href="https://modrinth.com/">Modrinth</a>&gt;.&nbsp;</span>
 </div>
-<p style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">You can view all of my released &lt;<a href="/projects/"> projects </a>&gt; here!</p>
+<!-- <p style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">You can view all of my released &lt;<a href="/projects/"> projects </a>&gt; here!</p> -->
+
+<script>
+  const fadeIns = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+        }, 1500); // set a 1 second delay before fading in
+        observer.unobserve(entry.target); // stop observing the element after it fades in
+      }
+    });
+  });
+
+  fadeIns.forEach(fadeIn => {
+    observer.observe(fadeIn);
+  });
+
+</script>

@@ -73,12 +73,21 @@ permalink: /hampter/
             img.style.display = "block";
             img.style.marginLeft = "auto";
             img.style.marginRight = "auto";
-            img.style.marginTop = "-12%";
-            img.style.width = "30%";
+            var isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+            // set the width of the image based on the device orientation
+            if (isPortrait) {
+                img.style.width = "70%";
+                img.style.marginTop = "-32%";
+            } else {
+                img.style.width = "30%";
+                img.style.marginTop = "-12%";
+            }
+
+            // img.style.width = "30%";
             document.body.appendChild(img);
             isFirstClick = false;
-        }
-        
+        }        
     });
 
     playPauseBtn.addEventListener("click", toggleMute);

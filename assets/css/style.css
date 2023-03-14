@@ -77,8 +77,8 @@
     background-repeat: no-repeat; 
     background-position: center; */
     /* background-color: rgb(124, 60, 173); */
-    background: rgb(95, 49, 175);
-    color: #eaeaea;
+    background: rgb(80, 31, 164);  
+    color: #eaeaea;  
     font-size: 16px;
     line-height: 1.5;  
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -287,7 +287,7 @@
     border: 3px inset #a758ecb6;
     border-radius: 50%;
     background-color: rgba(52, 94, 244, 0.779);
-    display: inline-block;  
+    display: inline-block;          
     padding: 10px;
     backdrop-filter: blur(0px) saturate(100%) brightness(50%);
     font-size: 36px;
@@ -603,9 +603,9 @@
   }
 
   .custom-shape-divider-top-1678663726 .shape-fill {
-    fill: #2C16C2;
-  }  
-  
+    fill: #3e16c2;
+  }   
+     
   /* General & 'Reset' Stuff */
   .container {
     width: 90%;

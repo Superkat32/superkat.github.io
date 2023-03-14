@@ -288,15 +288,15 @@
     border-radius: 50%;
     background-color: rgba(52, 94, 244, 0.779);
     display: inline-block;          
-    padding: 10px;
+    padding: 10px;  
     backdrop-filter: blur(0px) saturate(100%) brightness(50%);
     font-size: 36px;
     position: absolute;
-    top: 50px;
+    top: 50px;   
     right: 75px;
   }
 
-  @media (orientation: portrait) {
+  @media (orientation: portrait) {      
     .spacemodeButton {
       width: 7%;
       right: 15%;

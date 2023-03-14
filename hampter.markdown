@@ -11,6 +11,8 @@ permalink: /hampter/
     <img id="play-pause-icon" src="../assets/images/hampter.jpg" />
 </button>
 
+<p id="audionoti" style="text-align: center"></p>
+
 <!-- <script>
     const image = document.getElementById('glitch-image');
 
@@ -73,6 +75,7 @@ permalink: /hampter/
             img.style.display = "block";
             img.style.marginLeft = "auto";
             img.style.marginRight = "auto";
+            document.getElementById("audionoti").innerHTML = "If no audio is playing, try reloading the page!";
             var isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
             // set the width of the image based on the device orientation
@@ -92,16 +95,19 @@ permalink: /hampter/
 
     playPauseBtn.addEventListener("click", toggleMute);
 
-    function playAnimation() {
-        setTimeout(function() {
-            document.body.classList.add('matrix-transition');
-            document.body.classList.add('matrix-bg');
-            const img = document.getElementById("hampter");
-            img.src = "../assets/images/hackerHampter.png";
-            bg.remove();
-        }, 18000);
-    }
+        function playAnimation() {
+            setTimeout(function() {
+                document.body.classList.add('matrix-transition');
+                document.body.classList.add('matrix-bg');
+                const img = document.getElementById("hampter");
+                img.src = "../assets/images/hackerHampter.png";
+                bg.remove();
+            }, 18000);
 
+            setTimeout(function() {
+                document.getElementById("audionoti").classList.add("fade-in");
+            }, 5000)
+        }
     });
 
 

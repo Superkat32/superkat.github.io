@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | absolute_url }}?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+<link rel="icon" type="image/x-icon" href="{{ 'favicon.png' | relative_url }}">
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Superkat</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Superkat’s Awesome Website" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my awesome description for my awesome new website!" />
+<meta property="og:description" content="This is my awesome description for my awesome new website!" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Superkat’s Awesome Website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Superkat’s Awesome Website" />
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","description":"This is my awesome description for my awesome new website!","headline":"Superkat’s Awesome Website","name":"Superkat’s Awesome Website","url":"http://localhost:4000/"}</script>
+  <!-- End Jekyll SEO tag -->
+
+</head>
+
+<div class="bg"></div>
+<body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="{{ site.baseurl }}">
+          <h1 data-value="Superkat's Awesome Website">Superkat's Awesome Website</h1>
+        </a>
+        <h2>This is my awesome description for my awesome new website!</h2>
+
+        <script>
+          const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          const visitedKey = "visited";
+          
+          window.onload = () => {
+            const h1 = document.querySelector("h1");
+          
+            if (!localStorage.getItem(visitedKey)) {
+              let iterations = 0;
+          
+              const interval = setInterval(() => {
+                console.log("Title Text is being randomized!");
+                h1.innerText = h1.dataset.value
+                  .split("")
+                  .map((letter, index) => {
+                    if (index < iterations) {
+                      return h1.dataset.value[index];
+                    }
+          
+                    return letters[Math.floor(Math.random() * 26)];
+                  })
+                  .join("");
+          
+                if (iterations >= h1.dataset.value.length) clearInterval(interval);
+          
+                iterations += 1 / 3;
+              }, 30);
+            }
+          };
+          
+          window.addEventListener("beforeunload", () => {
+            localStorage.removeItem(visitedKey);
+          });
+          </script>
+
+        <button id="mainNavBtn" class="mainNavBtn"></button>
+
+        <div id="downloads"> 
+          <a href="https://github.com/Superkat32/" class="btn btn-github" style="border-color: rgba(167, 88, 236, 0.715);"><span class="icon"></span>&lt;GitHub&gt;</a>
+          <a href="{{ site.baseurl }}projects/" class="btn btn-projects" style="border-color: rgba(167, 88, 236, 0.715);"><span class="icon"></span>&lt;Projects&gt;</a>
+          <a href="{{ site.baseurl }}about/" class="btn btn-aboutme" style="border-color: rgba(167, 88, 236, 0.715);"><span class="icon"></span>&lt;About Me&gt;</a>
+          <a href="{{ site.baseurl }}hampter/" class="btn btn-hampter" style="border-color: rgba(167, 88, 236, 0.714);"><span class="icon"></span>&lt;Hampter&gt;</a>
+        </div>
+
+        <script>
+
+          const mainNavBtn = document.getElementById("mainNavBtn");
+          const navDropdown = document.getElementById("downloads");
+
+          mainNavBtn.addEventListener("click", () => {
+            console.log('yay');
+            navDropdown.classList.toggle("show");
+          });
+
+
+        </script>
+
+          <img id="spacemodeButton" alt="Image" class="spacemodeButton">
+
+          <script>
+            // set the image path based on the page location
+            if (window.location.pathname === '{{ site.baseurl }}') {
+              document.getElementById('spacemodeButton').src = './assets/images/spacemodeOn.png';
+            } else {
+              document.getElementById('spacemodeButton').src = '../assets/images/spacemodeOn.png';
+            }
+          </script>
+
+          <script>
+            let spacemode = true;
+            let canChange = true;
+            const spacemodeButton = document.getElementById("spacemodeButton");
+            spacemodeButton.addEventListener("click", () => {
+              if(!spacemode) {
+                toggleSpacemode();
+              } else {
+                toggleSpacemode();
+              }
+              console.log('horaay!')
+            });
+
+            function toggleSpacemode() {
+              if (canChange) {
+                if(!spacemode) {
+                  spacemode = true;
+                  changeSpacemodeIcon();
+                  document.getElementById('space').style.display = "block";
+                  // document.getElementById('main_content').style.opacity = "0";
+                  canChange = false;
+                  setTimeout(function() {
+                    document.getElementById('space').classList.add('fade-in-reverse');
+                    document.getElementById('main_content').classList.remove('fade-in');
+                  });
+                  setTimeout(function() {
+                    canChange = true;
+                  }, 1200); 
+                } else {
+                  spacemode = false;
+                  changeSpacemodeIcon();
+                  document.getElementById('space').classList.add('fade-in');
+                  document.getElementById('space').classList.remove('fade-in-reverse');
+                  // document.getElementById('main_content').classList.remove('fadein');
+                  canChange = false;
+                  setTimeout(function() {
+                    document.getElementById('space').style.display = "none";
+                    canChange = true;
+                  }, 1300);
+                }
+              }
+            }
+
+            function changeSpacemodeIcon() {
+              if(!spacemode) {
+                if (window.location.pathname === '{{ site.baseurl }}') {
+                  document.getElementById('spacemodeButton').src = './assets/images/spacemodeOff.png';
+                } else {
+                  document.getElementById('spacemodeButton').src = '../assets/images/spacemodeOff.png';
+                }
+              } else {
+                if (window.location.pathname === '{{ site.baseurl }}') {
+                  document.getElementById('spacemodeButton').src = './assets/images/spacemodeOn.png';
+                } else {
+                  document.getElementById('spacemodeButton').src = '../assets/images/spacemodeOn.png';
+                }
+              }
+            }
+          </script>
+
+      </div>
+    </header>
+    <div class="container">
+      <section id="main_content">
+        <section id="space">
+          <!-- Stars -->
+          <div class="star-container">
+            <div class="stars star-1"></div>
+          </div>
+          <div class="star-container">
+            <div class="stars star-2"></div>
+          </div>
+          <div class="star-container">
+            <div class="stars star-3"></div>
+          </div>
+          <div class="star-container">
+            <div class="stars star-4"></div>
+          </div>
+  
+          <!-- Background Stars -->
+          <div class="star-container">
+            <div class="bgstars"></div>
+          </div>
+  
+          <!-- Constellations -->
+          <div class="constellation-container">
+            <div class="constellations"></div>
+          </div>
+  
+          <!-- Galaxy -->
+          <div class="galaxy-container">
+            <div class="galaxy"></div>
+          </div>
+  
+          <!-- Glint -->
+          <div class="glint-container">
+            <div class="glint"></div>
+          </div>
+          
+          <!-- Milky Way -->
+          <div class="milkyway-container">
+            <div class="milkyway"></div>
+          </div>
+          <div class="milkyway-container">
+            <div class="milkywaybluestars"></div>
+          </div>
+          <div class="milkyway-container">
+            <div class="milkywayyellowstars"></div>
+          </div>
+        </section>
+        <div id="projects-list">
+            <div class="projects-container">
+                <a href="#brokenleadwarner">
+                    <div class="projects projects-1"></div>
+                </a>
+            </div>
+        </div>
+        <div id="divideProjectsListFromProjects"></div>
+        <div id="projects">
+            <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                <div>
+                <div class="centertopimage-container"> 
+                    <img style="" src="../assets/images/BrokenLeadWarner.png">
+                </div>
+                  <h1 style="font-size: 46px; text-align: center;" id="brokenleadwarner">&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;</h1>
+                  <ul>
+                    <li>A Minecraft mod which warns you if your lead breaks.</li>
+                    <li>Started in July, 2022</li>
+                    <li>Released in October, 2022</li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+
+        <script>
+            const fadeIns = document.querySelectorAll('.fade-in');
+          
+            const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                if (entry.intersectionRatio > 0) {
+                  entry.target.style.opacity = '1';
+                }
+              });
+            });
+          
+            fadeIns.forEach(fadeIn => {
+              observer.observe(fadeIn);
+            });
+          </script>
+        {{ content }}
+      </section>
+    </div>
+  </body>
+</html>

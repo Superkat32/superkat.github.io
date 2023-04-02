@@ -86,13 +86,13 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<div class="fade-in" style="text-align: center; border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<!-- <div class="fade-in" style="text-align: center; border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <p>Enjoy this GitHub stat card!</p>
   <p style="font-size: 16px; color: #808080">Stat card generated from &lt;<a href="https://github.com/anuraghazra/github-readme-stats">GitHub Readme Stats</a>&gt;</p>
   <div class="statcard-container">
     <img src="https://github-readme-stats.vercel.app/api?username=superkat32&show_icons=true&theme=ocean_dark&hide=contribs&title_color=a758ec&text_color=67f76c&border_color=a758ec">
   </div>
-</div>
+</div> -->
 
 <script>
   const fadeIns = document.querySelectorAll('.fade-in');

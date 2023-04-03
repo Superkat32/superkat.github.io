@@ -582,6 +582,9 @@
     }
   }
 
+  
+  /* Projects Page Stuff */
+
   @keyframes size-project {
     from {
       transform: scale(1) rotate(0); 
@@ -590,8 +593,6 @@
       transform: scale(0.7) rotate(15deg);
     }
   }
-
-  /* Projects Page Stuff */
 /* 
   #divideProjectsListFromProjects {
     margin-top: 200px; 
@@ -605,12 +606,14 @@
     background: url('../images/BrokenLeadWarner.png') no-repeat center center/contain;
     position: absolute;
     top: 32%;
-    right: 30%;          
-    width: 20%; 
-    height: 20%; 
+    right: 23%;          
+    width: 150px; 
+    height: 150px; 
     background-size: 50;
     animation: size-project 7.5s ease-in-out alternate infinite;
+    border-style: ridge;
     transform-origin: center;
+    border-radius: 15%;
     z-index: 1;
   }
 

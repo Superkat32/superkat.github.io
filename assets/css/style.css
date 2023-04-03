@@ -353,7 +353,6 @@
     background-size: 40%; 
     transform-origin: center; */  
     position: fixed;
-    background-attachment: fixed;
     top: 37%;
     right: 40%;
     width: 100%;

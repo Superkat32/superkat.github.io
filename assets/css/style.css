@@ -352,11 +352,12 @@
     right: 40%;
     background-size: 40%; 
     transform-origin: center; */ 
-    position: fixed;
-    top: 37%;
+    position: absolute;
+    /* margin-top: 5rem; */
+    top: 32%;
     right: 40%;
     width: 100%;
-    height: 100vh;
+    height: 75%;
     overflow: auto;
     animation: size-galaxy 50s ease-in-out alternate infinite;
     transform-origin: center;

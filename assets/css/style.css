@@ -600,7 +600,7 @@
 
   #projects-list { 
     height: 100vh;  
-  } 
+  }  
 
   .projects-container:nth-of-type(1) .projects-1 {
     background: url('../images/BrokenLeadWarner.png') no-repeat center center/contain;
@@ -611,12 +611,54 @@
     height: 150px; 
     background-size: 50;
     animation: size-project 7.5s ease-in-out alternate infinite;
-    border-style: ridge;
+    border-style: ridge; 
     transform-origin: center;
     border-radius: 15%;
     z-index: 1;
   }
 
+  .project-scroll-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .project-scroll {
+    display: inline-block;
+  }
+
+  .project { 
+    display: inline-block;
+    width: 200px;
+    height: 200px; 
+    margin-right: 20px;
+  }
+
+  @keyframes project-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Style the scrollbar track */
+/* Style the scrollbar track for project-scroll-container */
+.project-scroll-container::-webkit-scrollbar-track {
+  background-color: #7b18d1a6; /* change to the desired background color */
+  border-radius: 7px;
+} 
+ 
+/* Style the scrollbar thumb for project-scroll-container */
+.project-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #a758ec; /* change to the desired color of the thumb */
+  border-radius: 10px; /* change to the desired border radius */
+}
+
+/* Style the scrollbar width for project-scroll-container */
+.project-scroll-container::-webkit-scrollbar {
+  width: 10px; /* change to the desired width */
+}
   
   /* Top shape */
 
@@ -642,6 +684,7 @@
   }   
      
   /* General & 'Reset' Stuff */
+
   .container {
     width: 90%;
     max-width: 1000px;

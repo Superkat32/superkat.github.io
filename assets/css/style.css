@@ -294,13 +294,13 @@
     position: absolute;
     top: 50px;   
     right: 75px;
-  }
+  }    
 
   @media (orientation: portrait) {      
     .spacemodeButton {
       width: 7%;
       right: 15%;
-      top: 40%; 
+      top: 40%;         
     }
   }
 
@@ -313,7 +313,7 @@
     height: 100%;
     background-position: right bottom 5%;
     z-index: -3;
-  }
+  }   
 
   .bgstars {
     background: url(../images/backgroundStars.png) center center/cover repeat;

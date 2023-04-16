@@ -105,8 +105,16 @@ permalink: /hampter/
             }, 18000);
 
             setTimeout(function() {
+                document.getElementById("audionoti").innerHTML = "You may also have to turn up your volume!";
+            }, 3000);
+
+            setTimeout(function() {
+                document.getElementById("audionoti").innerHTML = "If reloading the page doesn't work, leave the page then come back!";
+            }, 6000);
+
+            setTimeout(function() {
                 document.getElementById("audionoti").classList.add("fade-in");
-            }, 5000)
+            }, 9000)
         }
     });
 

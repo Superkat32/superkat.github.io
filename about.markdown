@@ -30,12 +30,12 @@ function typeWriter() {
 this.typeWriter();
 </script>
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-  <div class="rightimage-container">
+  <div class="rightimage-container fade-in-delay4">
     <img src="../assets/images/codingLanguages.png">
   </div>
-  <div class="text-container">
-    <h1 style="font-size: 46px">Here are some key things to know about my journey.</h1>
-    <ul>
+  <div>
+    <h1 class="fade-in-delay1" style="font-size: 46px">Here are some key things to know about my journey.</h1>
+    <ul class="fade-in-delay2">
       <li>I have been toying around with code since 2020.</li>
       <li>I started properly learning code in 2022.</li>
       <li>The first big project I started was in mid-2022.</li>
@@ -95,32 +95,41 @@ this.typeWriter();
 </div> -->
 
 <script>
-  const fadeIns = document.querySelectorAll('.fade-in');
+  const fadeIns = [
+    ...document.querySelectorAll('.fade-in'),
+    ...document.querySelectorAll('.fade-in-delay1'),
+    ...document.querySelectorAll('.fade-in-delay2'),
+    ...document.querySelectorAll('.fade-in-delay3'),
+    ...document.querySelectorAll('.fade-in-delay4'),
+    ...document.querySelectorAll('.fade-in-delay5'),
+    ...document.querySelectorAll('.fade-in-delay6'),
+  ];
 
-function isMobile() {
-  return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-function isElementVisible(el, threshold = 0.75) {
-  const rect = el.getBoundingClientRect();
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-  const visiblePercentage = visibleHeight / el.clientHeight;
-  if (isMobile()) {
-    return visiblePercentage >= 0.6;
-  } else {
-    return visiblePercentage >= threshold;
+  function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
   }
-}
 
-function fadeInElements() {
-  fadeIns.forEach(fadeIn => {
-    if (isElementVisible(fadeIn)) {
-      fadeIn.style.opacity = '1';
+  function isElementVisible(el, threshold = 0.75) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const visiblePercentage = visibleHeight / el.clientHeight;
+    if (isMobile()) {
+      return visiblePercentage >= 0.6;
+    } else {
+      return visiblePercentage >= threshold;
     }
-  });
-}
+  }
 
-window.addEventListener('scroll', fadeInElements);
+  function fadeInElements() {
+    fadeIns.forEach((fadeIn, index) => {
+      if (isElementVisible(fadeIn)) {
+        fadeIn.style.opacity = '1';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', fadeInElements);
 
 </script>
+

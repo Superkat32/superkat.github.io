@@ -46,37 +46,37 @@ this.typeWriter();
 <div><p></p></div>
 
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-  <div class="leftimage-container">
+  <div class="leftimage-container fade-in-delay1">
     <img src="../assets/images/BrokenLeadWarner.png">
   </div>
-    <h1 style="font-size: 38px">&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;: My first big project.</h1>
-    <p>Started in mid-2022, Broken Lead Warner is a Minecraft mod which alerts you if your in-game lead item snaps. After 4 months of on/off work, Broken Lead Warner was released on October 7th, 2022.</p>
+    <h1 class="fade-in-delay3" style="font-size: 38px">&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;: My first big project.</h1>
+    <p class="fade-in-delay4">Started in mid-2022, Broken Lead Warner is a Minecraft mod which alerts you if your in-game lead item snaps. After 4 months of on/off work, Broken Lead Warner was released on October 7th, 2022.</p>
 </div>
 
 <div><p></p></div>
 
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-  <div class="topimage-container">
+  <div class="topimage-container fade-in-delay1">
     <img src="../assets/images/githublogo.jpg">
   </div>
-  <p>Created for the offical Fabric &lt;<a href="https://github.com/Luligabi1/ParticleExampleMod">Particle Example Mod</a>&gt;, my first pull request was merged on January 2nd, 2023.</p>
+  <p class="fade-in-delay3">Created for the offical Fabric &lt;<a href="https://github.com/Luligabi1/ParticleExampleMod">Particle Example Mod</a>&gt;, my first pull request was merged on January 2nd, 2023.</p>
 </div>
 
 <div><p></p></div>
 
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-  <div class="rightimage-container">
+  <div class="rightimage-container fade-in-delay2">
     <img src="../assets/images/explosiveicon.png">
   </div>
-  <h1 style="font-size: 46px">&lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;</h1>
-  <p>The second released Minecraft mod of mine. Started in late December of 2022 and released on January 1st, 2023, this mod makes the visual effect of explosions cooler. Explosive Enhancement is also my most popular mod and my favorite mod.</p>
+  <h1 class="fade-in-delay1" style="font-size: 46px">&lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;</h1>
+  <p class="fade-in-delay4">The second released Minecraft mod of mine. Started in late December of 2022 and released on January 1st, 2023, this mod makes the visual effect of explosions cooler. Explosive Enhancement is also my most popular mod and my favorite mod.</p>
 </div>
 
 <div><p></p></div>
 
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-  <h1 style="font-size: 56px">That is mostly my coding journey thus far.</h1>
-  <ul>
+  <h1 class="fade-in-delay1" style="font-size: 56px">That is mostly my coding journey thus far.</h1>
+  <ul class="fade-in-delay3">
     <li>I'm still learning Java.</li>
     <li>I'm working on more Minecraft mods.</li>
     <li>I'm also playing around with Web Development.</li>

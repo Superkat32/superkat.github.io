@@ -257,11 +257,11 @@
         <div id="projects">
           <!-- <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 100px;">
             <div>
-              <div class="centertopimage-container"> 
+              <div class="centertopimage-container fade-in-delay1"> 
                   <img src="../assets/images/REPLACE_ME_WITH_MOD_ICON.png">
               </div>
-              <h1 style="font-size: 46px; text-align: center;" id="TEMPLATE">&lt;<a href="REPLACE ME WITH MOD LINK">REPLACE ME WITH MOD NAME</a>&gt;</h1>
-              <ul>
+              <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;" id="TEMPLATE">&lt;<a href="REPLACE ME WITH MOD LINK">REPLACE ME WITH MOD NAME</a>&gt;</h1>
+              <ul class="fade-in-delay4">
                 <li>Bullet point 1</li>
                 <li>Bullet point 2</li>
                 <li>Bullet point 3</li>
@@ -270,11 +270,11 @@
           </div> -->
           <div class="fade-in" style="border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 100px;">
             <div>
-              <div class="centertopimage-container"> 
+              <div class="centertopimage-container fade-in-delay1"> 
                   <img id="brokenleadwarner" src="../assets/images/BrokenLeadWarner.png">
               </div>
-              <h1 style="font-size: 46px; text-align: center;">&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;</h1>
-              <ul>
+              <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;">&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;</h1>
+              <ul class="fade-in-delay4">
                 <li>A Minecraft mod which warns you if your lead breaks.</li>
                 <li>Started in July, 2022</li>
                 <li>Released in October, 2022</li>
@@ -284,11 +284,11 @@
 
           <div class="fade-in" style="border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 100px;">
             <div>
-              <div class="centertopimage-container"> 
+              <div class="centertopimage-container fade-in-delay1"> 
                   <img id="explosiveenhancement" src="../assets/images/explosiveicon.png">
               </div>
-              <h1 style="font-size: 46px; text-align: center;">&lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;</h1>
-              <ul>
+              <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;">&lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;</h1>
+              <ul class="fade-in-delay4">
                 <li>A Minecraft mod which enhances the explosion animation.</li>
                 <li>Started in late December, 2022</li>
                 <li>Released on Janurary 1st, 2023</li>
@@ -298,35 +298,42 @@
         </div>
 
         <script>
-            const fadeIns = document.querySelectorAll('.fade-in');
-
-function isMobile() {
-  return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-function isElementVisible(el, threshold = 0.75) {
-  const rect = el.getBoundingClientRect();
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-  const visiblePercentage = visibleHeight / el.clientHeight;
-  if (isMobile()) {
-    return visiblePercentage >= 0.6;
-  } else {
-    return visiblePercentage >= threshold;
-  }
-}
-
-function fadeInElements() {
-  fadeIns.forEach(fadeIn => {
-    if (isElementVisible(fadeIn)) {
-      fadeIn.style.opacity = '1';
-    }
-  });
-}
-
-window.addEventListener('scroll', fadeInElements);
-
-
+          const fadeIns = [
+            ...document.querySelectorAll('.fade-in'),
+            ...document.querySelectorAll('.fade-in-delay1'),
+            ...document.querySelectorAll('.fade-in-delay2'),
+            ...document.querySelectorAll('.fade-in-delay3'),
+            ...document.querySelectorAll('.fade-in-delay4'),
+            ...document.querySelectorAll('.fade-in-delay5'),
+            ...document.querySelectorAll('.fade-in-delay6'),
+          ];
+        
+          function isMobile() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+          }
+        
+          function isElementVisible(el, threshold = 0.75) {
+            const rect = el.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+            const visiblePercentage = visibleHeight / el.clientHeight;
+            if (isMobile()) {
+              return visiblePercentage >= 0.6;
+            } else {
+              return visiblePercentage >= threshold;
+            }
+          }
+        
+          function fadeInElements() {
+            fadeIns.forEach((fadeIn, index) => {
+              if (isElementVisible(fadeIn)) {
+                fadeIn.style.opacity = '1';
+              }
+            });
+          }
+        
+          window.addEventListener('scroll', fadeInElements);
+        
         </script>
         {{ content }}
       </section>

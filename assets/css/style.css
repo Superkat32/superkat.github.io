@@ -300,7 +300,7 @@
     .spacemodeButton {
       width: 7%;
       right: 15%;
-      top: 75%; 
+      top: 40%; 
     }
   }
 
@@ -647,7 +647,7 @@
 .project-scroll-container::-webkit-scrollbar-track {
   background-color: #7b18d1a6; /* change to the desired background color */
   border-radius: 7px;
-} 
+}   
  
 /* Style the scrollbar thumb for project-scroll-container */
 .project-scroll-container::-webkit-scrollbar-thumb {

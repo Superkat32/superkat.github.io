@@ -74,6 +74,16 @@ this.typeWriter();
 
 <div><p></p></div>
 
+<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+  <div class="leftimage-container fade-in-delay1">
+    <img src="../assets/images/hamptermod.png">
+  </div>
+    <h1 class="fade-in-delay3" style="font-size: 38px">&lt;<a href="https://modrinth.com/mod/hampter">Hampter</a>&gt;: My first April Fools project.</h1>
+    <p class="fade-in-delay4">Started in early March, 2023, Hampter is a Minecraft mod which adds the one and only Hampter to Minecraft! Released on April 1st of 2023.</p>
+</div>
+
+<div><p></p></div>
+
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
   <h1 class="fade-in-delay1" style="font-size: 56px">That is mostly my coding journey thus far.</h1>
   <ul class="fade-in-delay3">

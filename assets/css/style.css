@@ -67,6 +67,52 @@
   .highlight .ss {
     color: #90a959;
   }
+  .highlight-bold {
+    color: #b080f7 
+  }   
+  .highlight-bold::before { 
+    content: "<";
+    color: #85fb89; /* or any other color you want */
+    font-weight: bold;
+  }
+  .highlight-bold::after {
+    content: ">";
+    color: #85fb89; /* or any other color you want */
+    font-weight: bold;
+  }
+  .highlight-link {
+    color: #63c0f5;
+  }
+  .highlight-link::before {
+    content: "<";
+    color: #67f76c; /* or any other color you want */
+    font-weight: bold;
+  }   
+  .highlight-link::after {
+    content: ">";
+    color: #67f76c; /* or any other color you want */
+    font-weight: bold;
+  }
+  .highlight-name { 
+    color: #b080f7;
+  }
+  .highlight-name::after {
+    content: "<";
+    color: #67f76c;
+    font-weight: bold;
+  }
+  .highlight-name2 { 
+    color: #85fb89;
+  }
+  .highlight-name3 {       
+    color: #b080f7;
+  }
+  .highlight-name3::after {
+    content: ">";
+    color: #67f76c; 
+    font-weight: bold;
+  }
+
   
   body {
     margin: 0;
@@ -1071,7 +1117,7 @@
   .fade-in-delay4 {  
     opacity: 0;
     transition: opacity 1.25s ease-in-out;      
-    transition-delay: 1.4s;        
+    transition-delay: 1.4s;             
   }
 
   .fade-in-delay5 {  

@@ -33,8 +33,11 @@ function typeWriter() {
 
 this.typeWriter();
 </script>
+<!-- <div class="fade-in" style="border: 3px inset #a758ecb6; display: flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">
+    <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">I'm Superkat32&lt;a.k.a Kat&gt;, and I enjoy making high quality, open-source Minecraft mods for &lt;<a href="https://fabricmc.net/">Fabric</a>&gt;. I exclusively upload them to &lt;<a href="https://modrinth.com/">Modrinth</a>&gt;.&nbsp;</span>
+</div> -->
 <div class="fade-in" style="border: 3px inset #a758ecb6; display: flex; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px;">
-    <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">I'm Superkat32&lt;a.k.a Kat&gt;, and I enjoy making Minecraft mods for &lt;<a href="https://fabricmc.net/">Fabric</a>&gt;, and uploading them to &lt;<a href="https://modrinth.com/">Modrinth</a>&gt;.&nbsp;</span>
+    <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">I'm <span class="highlight-name">Superkat32</span><span class="highlight-name2">a.k.a </span><span class="highlight-name3">Kat</span>.<br>I enjoy making <span class="highlight-bold">high quality</span>, <span class="highlight-bold">open-source</span> Minecraft mods for <a class="highlight-link" href="https://fabricmc.net/">Fabric</a>.<br>I exclusively upload them to <a class="highlight-link" href="https://modrinth.com/">Modrinth</a>.</span>
 </div>
 <!-- <p style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">You can view all of my released &lt;<a href="/projects/"> projects </a>&gt; here!</p> -->
 

@@ -59,7 +59,7 @@ this.typeWriter();
   <div class="topimage-container fade-in-delay1">
     <img src="../assets/images/githublogo.jpg">
   </div>
-  <p class="fade-in-delay3">Created for the offical Fabric &lt;<a href="https://github.com/Luligabi1/ParticleExampleMod">Particle Example Mod</a>&gt;, my first pull request was merged on January 2nd, 2023.</p>
+  <p class="fade-in-delay2">Created for the offical Fabric &lt;<a href="https://github.com/Luligabi1/ParticleExampleMod">Particle Example Mod</a>&gt;, my first pull request was merged on January 2nd, 2023.</p>
 </div>
 
 <div><p></p></div>

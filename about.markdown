@@ -115,10 +115,18 @@ this.typeWriter();
     const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
     const visiblePercentage = visibleHeight / el.clientHeight;
     if (isMobile()) {
-      return visiblePercentage >= 0.6;
+      return visiblePercentage >= 0.5;
     } else {
       return visiblePercentage >= threshold;
     }
+  }
+
+  function isElementFadingOut(el, threshold = 0.95) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const hiddenHeight = Math.max(rect.bottom - windowHeight, 0) + Math.max(0 - rect.top, 0);
+    const hiddenPercentage = hiddenHeight / el.clientHeight;
+    return hiddenPercentage >= threshold;
   }
 
   function fadeInElements() {
@@ -126,10 +134,13 @@ this.typeWriter();
       if (isElementVisible(fadeIn)) {
         fadeIn.style.opacity = '1';
       }
+      // Fade out the element if only 10% of it is viewable after it has already faded in
+      else if (fadeIn.style.opacity == '1' && isElementFadingOut(fadeIn)) {
+        fadeIn.style.opacity = '0';
+      }
     });
   }
 
   window.addEventListener('scroll', fadeInElements);
 
 </script>
-

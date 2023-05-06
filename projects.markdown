@@ -30,7 +30,7 @@ function typeWriter() {
 this.typeWriter();
 </script>
 
-<!-- <div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<!-- <div class="fade-in purpleborder">
   <div class="text-container">
     <h1 style="font-size: 46px">My Projects</h1>
   </div>

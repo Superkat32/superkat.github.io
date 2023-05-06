@@ -29,7 +29,7 @@ function typeWriter() {
 
 this.typeWriter();
 </script>
-<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in purpleborder">
   <div class="rightimage-container fade-in-delay4">
     <img src="../assets/images/codingLanguages.png">
   </div>
@@ -45,7 +45,7 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in purpleborder">
   <div class="leftimage-container fade-in-delay1">
     <img src="../assets/images/BrokenLeadWarner.png">
   </div>
@@ -55,7 +55,7 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in purpleborder">
   <div class="topimage-container fade-in-delay1">
     <img src="../assets/images/githublogo.jpg">
   </div>
@@ -64,7 +64,7 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in purpleborder">
   <div class="rightimage-container fade-in-delay2">
     <img src="../assets/images/explosiveicon.png">
   </div>
@@ -74,7 +74,7 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<div class="fade-in" style="border: 3px inset #a758ecb6; display: inline-block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in purpleborder">
   <div class="leftimage-container fade-in-delay1">
     <img src="../assets/images/hamptermod.png">
   </div>
@@ -84,7 +84,7 @@ this.typeWriter();
 
 <div><p></p></div>
 
-<div class="fade-in" style="border: 3px inset #a758ecb6; display: block; padding: 3px; backdrop-filter: blur(0px) saturate(100%) brightness(50%); font-size: 36px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+<div class="fade-in purpleborder">
   <h1 class="fade-in-delay1" style="font-size: 56px">That is mostly my coding journey thus far.</h1>
   <ul class="fade-in-delay3">
     <li>I'm still learning Java.</li>

@@ -383,7 +383,7 @@
   } 
   
   .galaxy {
-    background: url(../images/galaxy.png) no-repeat center center/contain;
+    /* background: url(../images/galaxy.png) no-repeat center center/contain; */
     /* background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -398,6 +398,16 @@
     right: 40%;
     background-size: 40%; 
     transform-origin: center; */  
+    /* position: fixed;
+    top: 37%;
+    right: 40%;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    animation: size-galaxy 50s ease-in-out alternate infinite;
+    transform-origin: center;
+    z-index: -1; */
+    background: url(../images/galaxy.png) no-repeat center center/contain;
     position: fixed;
     top: 37%;
     right: 40%;
@@ -407,6 +417,7 @@
     animation: size-galaxy 50s ease-in-out alternate infinite;
     transform-origin: center;
     z-index: -1;
+    will-change: transform;
   }
   
 

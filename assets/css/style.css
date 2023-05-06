@@ -679,7 +679,7 @@
     font-size: 14px;
     text-align: center;
     opacity: 0;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
   }
   
   .clicked {

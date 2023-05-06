@@ -263,36 +263,66 @@
         </div>
         <div id="projects-list"></div>
         <div id="projects">
+          <!-- NEW PROJECT TEMPLATE -->
+
           <!-- <div class="fade-in purpleborder">
             <div>
               <div class="centertopimage-container fade-in-delay1"> 
-                  <img id="TEMPLATE" src="../assets/images/REPLACE_ME_WITH_MOD_ICON">
+                <img id="TEMPLATE" src="../assets/images/REPLACE_ME_WTIH_IMAGE">
+                <div class="button-container">
+                  <div class="circle">
+                    <span class="date">Started: REPLACE_ME_WITH_START_DATE<br>Released: REPLACE_ME_WITH_RELEASE_DATE</span>
+                  </div>
+                </div>                
               </div>
-              <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;">&lt;<a href="REPLACE ME WITH MOD LINK">REPLACE ME WITH MOD NAME</a>&gt;</h1>
+              <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;">&lt;<a href="REPLACE_ME_WITH_LINK">REPLACE_ME_WITH_NAME</a>&gt;</h1>
               <ul class="fade-in-delay4">
-                <li>Bullet point 1</li>
-                <li>Bullet point 2</li>
-                <li>Bullet point 3</li>
+                <li>BULLET_POINT_1</li>
+                <li>BULLET_POINT_2</li>
+                <li>BULLET_POINT_3</li>
               </ul>
             </div>
           </div> -->
+
           <div class="fade-in purpleborder">
             <div>
               <div class="centertopimage-container fade-in-delay1"> 
                 <img id="brokenleadwarner" src="../assets/images/BrokenLeadWarner.png">
                 <div class="button-container">
                   <div class="circle">
-                    <span class="date">Started: July 2022<br>Released: October 2022</span>
+                    <span class="date">Started: July, 2022<br>Released: October, 2022</span>
                   </div>
                 </div>                
               </div>
               <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;">&lt;<a href="https://modrinth.com/mod/broken-lead-warner">Broken Lead Warner</a>&gt;</h1>
               <ul class="fade-in-delay4">
                 <li>A Minecraft mod which warns you if your lead breaks.</li>
+                <li>A visual and audible "warning" will be shown/played upon a lead breaking. </li>
+                <li>My very first project which was released to the public.</li>
               </ul>
             </div>
           </div>
+
           <div class="fade-in purpleborder">
+            <div>
+              <div class="centertopimage-container fade-in-delay1"> 
+                <img id="explosiveenhancement" src="../assets/images/explosiveicon.png">
+                <div class="button-container">
+                  <div class="circle">
+                    <span class="date">Started: December, 2022<br>Released: Janurary 1st, 2023</span>
+                  </div>
+                </div>                
+              </div>
+              <h1 class="fade-in-delay3" style="font-size: 46px; text-align: center;">&lt;<a href="https://modrinth.com/mod/explosive-enhancement">Explosive Enhancement</a>&gt;</h1>
+              <ul class="fade-in-delay4">
+                <li>A Minecraft mod which enhances the explosion animation.</li>
+                <li>Additonal effects are added to really add to the explosion's power.</li>
+                <li>My most popular mod by far.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- <div class="fade-in purpleborder">
             <div>
               <div class="centertopimage-container fade-in-delay1"> 
                   <img id="explosiveenhancement" src="../assets/images/explosiveicon.png">
@@ -304,7 +334,7 @@
                 <li>Released on Janurary 1st, 2023.</li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
           <div class="fade-in purpleborder">
             <div>
@@ -334,22 +364,26 @@
             </div>
           </div>
           <script>
-            const circle = document.querySelector('.circle');
-            const date = document.querySelector('.date');
+            const circles = document.querySelectorAll('.circle');
+            const dates = document.querySelectorAll('.date');
 
-            let clicked = false;
-            circle.addEventListener('click', () => {
-            console.log('Clicked!');
-            if (!clicked) {
-              circle.classList.add('clicked');
-              date.style.opacity = 1;
-              clicked = true;
-            } else {
-              circle.classList.remove('clicked');
-              date.style.opacity = 0;
-              clicked = false;
-            }
-          });
+            circles.forEach((circle, index) => {
+              let clicked = false;
+
+              circle.addEventListener('click', () => {
+                console.log(`Clicked circle ${index}!`);
+
+                if (!clicked) {
+                  circle.classList.add('clicked');
+                  dates[index].style.opacity = 1;
+                  clicked = true;
+                } else {
+                  circle.classList.remove('clicked');
+                  dates[index].style.opacity = 0;
+                  clicked = false;
+                }
+              });
+            });
           </script>
 
           <!-- end of projects -->
